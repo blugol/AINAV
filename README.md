@@ -92,5 +92,14 @@ src/
     npm run build
     ```
 
+## 💸 Zero Cost Deployment (무료 배포 안내)
+This project is designed to be **100% Free** for personal use.
+이 프로젝트는 개인 사용 목적으로 **완전 무료**로 운영되도록 설계되었습니다.
+
+- **Hosting**: Free on [Vercel](https://vercel.com/) (Hobby Plan).
+- **Domain**: Free `.vercel.app` subdomain provided.
+- **Database**: Uses `localStorage` (No server cost).
+- **API**: Uses free public RSS feeds (No subscription needed).
+
 ---
 *Created by AInav Team (2026)*
