@@ -25,7 +25,9 @@ export const translations = {
             all: 'All',
             image: 'Image',
             video: 'Video',
-            audio: 'Audio',
+            audio: 'Music/Audio',
+            documents: 'Documents',
+            editing: 'Editing',
             uiux: 'UI/UX',
             chat: 'Chat',
             coding: 'Coding',
@@ -41,7 +43,29 @@ export const translations = {
             close: 'Close'
         },
         toolCard: {
-            visit: 'Go to Site'
+            visit: 'Go to Site',
+            viewDetails: 'View Details'
+        },
+        modal: {
+            about: 'About',
+            features: 'Key Features',
+            visit: 'Visit Official Website'
+        },
+        ticker: {
+            title: 'Active AI Services',
+            viewList: 'View Full List'
+        },
+        search: {
+            placeholder: 'Search AI tools...',
+            filter: 'Filter',
+            pricing: {
+                all: 'All Prices',
+                free: 'Free',
+                freemium: 'Freemium',
+                paid: 'Paid'
+            },
+            noResults: 'No tools found matching your search.',
+            favorites: 'My Favorites'
         }
     },
     ko: {
@@ -69,7 +93,9 @@ export const translations = {
             all: '전체',
             image: '이미지 생성',
             video: '영상 제작',
-            audio: '오디오/음성',
+            audio: '음악/오디오',
+            documents: '서류/문서',
+            editing: '편집',
             uiux: 'UI/UX 디자인',
             chat: '챗봇/LLM',
             coding: '코딩',
@@ -85,7 +111,29 @@ export const translations = {
             close: '닫기'
         },
         toolCard: {
-            visit: '사이트 방문'
+            visit: '사이트 방문',
+            viewDetails: '상세 보기'
+        },
+        modal: {
+            about: '소개',
+            features: '핵심 기능',
+            visit: '공식 홈페이지 방문'
+        },
+        ticker: {
+            title: '실시간 AI 서비스',
+            viewList: '전체 목록 보기'
+        },
+        search: {
+            placeholder: 'AI 도구 검색...',
+            filter: '필터',
+            pricing: {
+                all: '전체 가격',
+                free: '무료',
+                freemium: '부분 유료',
+                paid: '유료'
+            },
+            noResults: '검색 결과가 없습니다.',
+            favorites: '나의 즐겨찾기'
         }
     },
     ja: {
@@ -113,7 +161,9 @@ export const translations = {
             all: 'すべて',
             image: '画像生成',
             video: '動画制作',
-            audio: '音声/音楽',
+            audio: '音楽/音声',
+            documents: 'ドキュメント',
+            editing: '編集',
             uiux: 'UI/UX',
             chat: 'チャット/LLM',
             coding: 'プログラミング',
@@ -129,7 +179,29 @@ export const translations = {
             close: '閉じる'
         },
         toolCard: {
-            visit: 'サイトへ移動'
+            visit: 'サイトへ移動',
+            viewDetails: '詳細を見る'
+        },
+        modal: {
+            about: '概要',
+            features: '主な機能',
+            visit: '公式サイトへ'
+        },
+        ticker: {
+            title: '稼働中のAIサービス',
+            viewList: '全リストを見る'
+        },
+        search: {
+            placeholder: 'AIツールを検索...',
+            filter: 'フィルター',
+            pricing: {
+                all: '全価格',
+                free: '無料',
+                freemium: '一部有料',
+                paid: '有料'
+            },
+            noResults: '検索結果が見つかりませんでした。',
+            favorites: 'お気に入り'
         }
     },
     zh: {
@@ -157,7 +229,9 @@ export const translations = {
             all: '全部',
             image: '图像生成',
             video: '视频制作',
-            audio: '音频/语音',
+            audio: '音乐/音频',
+            documents: '文档',
+            editing: '编辑',
             uiux: 'UI/UX 设计',
             chat: '聊天机器人',
             coding: '编程',
@@ -173,7 +247,29 @@ export const translations = {
             close: '关闭'
         },
         toolCard: {
-            visit: '前往网站'
+            visit: '前往网站',
+            viewDetails: '查看详情'
+        },
+        modal: {
+            about: '简介',
+            features: '主要功能',
+            visit: '访问官方网站'
+        },
+        ticker: {
+            title: '活跃 AI 服务',
+            viewList: '查看完整列表'
+        },
+        search: {
+            placeholder: '搜索 AI 工具...',
+            filter: '筛选',
+            pricing: {
+                all: '全部价格',
+                free: '免费',
+                freemium: '免费增值',
+                paid: '付费'
+            },
+            noResults: '未找到匹配的工具。',
+            favorites: '我的收藏'
         }
     }
 };

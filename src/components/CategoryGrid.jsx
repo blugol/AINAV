@@ -36,8 +36,8 @@ const CategoryGrid = ({ categories, onSelect, isDarkMode, activeCategory }) => {
 
                         <span className={`
                             text-lg font-bold tracking-tight transition-colors
-                            ${isActive ? 'text-blue-900' : 'text-gray-500 group-hover:text-gray-900'}
-                             ${isDarkMode ? 'dark:text-gray-400 dark:group-hover:text-white' : ''}
+                            ${isActive ? 'text-blue-900' : 'text-slate-700 font-extrabold group-hover:text-black'}
+                             ${isDarkMode ? 'dark:text-slate-200 dark:font-bold dark:group-hover:text-white' : ''}
                         `}>
                             {cat.name}
                         </span>
