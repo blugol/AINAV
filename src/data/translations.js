@@ -37,10 +37,15 @@ export const translations = {
             etc: 'Browse/Etc'
         },
         news: {
-            modalTitle: 'Latest AI News',
-            original: 'Read Original',
-            visit: 'Visit Service',
-            close: 'Close'
+            breaking: 'Breaking News',
+            readMore: 'Read More',
+            visit: 'Visit Tool',
+            original: 'Original Source',
+            filter: {
+                today: 'Today',
+                week: 'This Week',
+                month: 'This Month'
+            }
         },
         toolCard: {
             visit: 'Go to Site',
@@ -66,6 +71,18 @@ export const translations = {
             },
             noResults: 'No tools found matching your search.',
             favorites: 'My Favorites'
+        },
+        ad: {
+            label: 'Advertisement'
+        },
+        auth: {
+            login: 'Login',
+            logout: 'Sign Out',
+            welcome: 'Welcome to AInav',
+            subtitle: 'Sign in to save your favorite tools',
+            google: 'Continue with Google',
+            github: 'GitHub (Coming Soon)',
+            terms: 'By continuing, you agree to our Terms of Service.'
         }
     },
     ko: {
@@ -105,10 +122,15 @@ export const translations = {
             etc: '기타/브라우징'
         },
         news: {
-            modalTitle: '최신 AI 뉴스',
-            original: '원문 보기',
-            visit: '서비스 방문',
-            close: '닫기'
+            breaking: '속보',
+            readMore: '더 보기',
+            visit: '도구 써보기',
+            original: '원본 기사',
+            filter: {
+                today: '오늘',
+                week: '이번 주',
+                month: '이번 달'
+            }
         },
         toolCard: {
             visit: '사이트 방문',
@@ -134,6 +156,18 @@ export const translations = {
             },
             noResults: '검색 결과가 없습니다.',
             favorites: '나의 즐겨찾기'
+        },
+        ad: {
+            label: '광고'
+        },
+        auth: {
+            login: '로그인',
+            logout: '로그아웃',
+            welcome: 'AInav에 오신 것을 환영합니다',
+            subtitle: '로그인하고 나만의 도구함을 만들어보세요',
+            google: 'Google로 계속하기',
+            github: 'GitHub (준비 중)',
+            terms: '계속 진행하면 이용약관 및 개인정보처리방침에 동의하게 됩니다.'
         }
     },
     ja: {
@@ -173,10 +207,15 @@ export const translations = {
             etc: 'その他'
         },
         news: {
-            modalTitle: '最新 AI ニュース',
-            original: '原文を読む',
-            visit: 'サービスへ',
-            close: '閉じる'
+            breaking: 'ニュース速報',
+            readMore: 'もっと読む',
+            visit: 'ツールを試す',
+            original: '元の記事',
+            filter: {
+                today: '今日',
+                week: '今週',
+                month: '今月'
+            }
         },
         toolCard: {
             visit: 'サイトへ移動',
@@ -202,6 +241,18 @@ export const translations = {
             },
             noResults: '検索結果が見つかりませんでした。',
             favorites: 'お気に入り'
+        },
+        ad: {
+            label: '広告'
+        },
+        auth: {
+            login: 'ログイン',
+            logout: 'ログアウト',
+            welcome: 'AInavへようこそ',
+            subtitle: 'ログインしてお気に入りのツールを保存',
+            google: 'Googleで続ける',
+            github: 'GitHub (準備中)',
+            terms: '続行することで、利用規約に同意したものとみなされます。'
         }
     },
     zh: {
@@ -241,10 +292,15 @@ export const translations = {
             etc: '其他'
         },
         news: {
-            modalTitle: '最新 AI 新闻',
-            original: '阅读原文',
-            visit: '访问服务',
-            close: '关闭'
+            breaking: '突发新闻',
+            readMore: '阅读更多',
+            visit: '试用工具',
+            original: '原始文章',
+            filter: {
+                today: '今天',
+                week: '本周',
+                month: '本月'
+            }
         },
         toolCard: {
             visit: '前往网站',
@@ -270,6 +326,18 @@ export const translations = {
             },
             noResults: '未找到匹配的工具。',
             favorites: '我的收藏'
+        },
+        ad: {
+            label: '广告'
+        },
+        auth: {
+            login: '登录',
+            logout: '退出登录',
+            welcome: '欢迎来到 AInav',
+            subtitle: '登录以保存您喜爱的工具',
+            google: '通过 Google 继续',
+            github: 'GitHub (即将推出)',
+            terms: '继续即表示您同意我们的服务条款。'
         }
     }
 };
