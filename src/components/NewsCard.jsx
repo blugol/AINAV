@@ -1,48 +1,73 @@
-import React from 'react';
-import { ExternalLink, Calendar, Star } from 'lucide-react';
+import React, { useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ExternalLink, Tag } from 'lucide-react';
+import { sanitizeHtml } from '../utils/sanitizer';
 
-const NewsCard = ({ news }) => {
+/* 
+ * News Feed Component (Soft-Depth UI + Lazy Load + XSS Protection)
+ * Displays RSS news items with semantic analysis (related tools).
+ */
+
+const NewsCard = React.memo(({ news, isDarkMode, onClick }) => {
+    // Memoized Sanitization for performance
+    const cleanSummary = useMemo(() => sanitizeHtml(news.summary), [news.summary]);
+
     return (
-        <div className="glass group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:bg-white/10 hover:shadow-xl hover:shadow-purple-500/10 h-full flex flex-col">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+        <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            whileHover={{ scale: 1.02, y: -2 }}
+            className={`
+        relative group overflow-hidden rounded-3xl p-6 transition-all duration-300
+        ${isDarkMode ? 'bg-gray-800/80 hover:bg-gray-700/80 text-white' : 'bg-white/80 hover:bg-white text-gray-900'}
+        backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/20 dark:border-gray-700/30
+        hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-blue-900/20
+      `}
+            onClick={onClick}
+        >
+            {/* Date Badge */}
+            <span className={`
+        inline-block px-3 py-1 text-xs font-bold rounded-full mb-3 uppercase tracking-wider
+        ${isDarkMode ? 'bg-blue-900/30 text-blue-300' : 'bg-blue-50 text-blue-600'}
+      `}>
+                {news.source || 'AI News'} • {new Date(news.pubDate).toLocaleDateString()}
+            </span>
 
-            <div className="relative h-48 overflow-hidden shrink-0">
-                <img
-                    src={news.imageUrl}
-                    alt={news.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute top-3 right-3 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 border border-white/10">
-                    <Calendar className="w-3 h-3" />
-                    {news.date}
-                </div>
-            </div>
+            {/* Title */}
+            <h3 className="text-xl font-bold leading-tight mb-3 group-hover:text-blue-500 transition-colors line-clamp-2">
+                {news.title}
+            </h3>
 
-            <div className="p-5 flex flex-col flex-grow">
-                <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 uppercase tracking-widest">
-                        {news.source}
-                    </span>
-                </div>
+            {/* Summary (Sanitized) */}
+            <div
+                className={`text-sm leading-relaxed mb-4 line-clamp-3 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}
+                dangerouslySetInnerHTML={{ __html: cleanSummary }}
+            />
 
-                <h3 className="text-lg font-bold text-white mb-2 leading-tight group-hover:text-purple-300 transition-colors line-clamp-2">
-                    {news.title}
-                </h3>
+            {/* Meta / Footer */}
+            <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100 dark:border-gray-700/50">
 
-                <p className="text-gray-400 text-sm mb-4 line-clamp-3 flex-grow">
-                    {news.summary}
-                </p>
+                {/* Related Tool (Contextual Linking) */}
+                {news.relatedTool && (
+                    <div className="flex items-center gap-2 text-xs font-medium text-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-1 rounded-md">
+                        <Tag className="w-3 h-3" />
+                        Related: {news.relatedTool}
+                    </div>
+                )}
 
                 <a
                     href={news.link}
-                    className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-purple-400 transition-colors group/link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-sm font-semibold text-blue-500 hover:text-blue-600 transition-colors ml-auto"
+                    onClick={(e) => e.stopPropagation()}
                 >
-                    원문 보기
-                    <ExternalLink className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                    Read More <ExternalLink className="w-3 h-3" />
                 </a>
             </div>
-        </div>
+        </motion.div>
     );
-};
+});
 
 export default NewsCard;

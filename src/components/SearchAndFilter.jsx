@@ -10,8 +10,6 @@ const SearchAndFilter = ({
     selectedCategories,
     onCategoryToggle,
     categories,
-    showFavorites,
-    setShowFavorites,
     isDarkMode,
     t
 }) => {
@@ -38,7 +36,7 @@ const SearchAndFilter = ({
                     className={`w-full py-4 pl-12 pr-12 rounded-2xl text-base font-medium transition-all shadow-sm outline-none border-2
                         ${isDarkMode
                             ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-500 focus:border-blue-500 focus:bg-gray-900'
-                            : 'bg-white border-gray-100 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:shadow-md'
+                            : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:shadow-md'
                         }`}
                 />
                 {searchQuery && (
@@ -49,23 +47,6 @@ const SearchAndFilter = ({
                         <X size={18} />
                     </button>
                 )}
-            </div>
-
-            <div className="flex justify-center mb-4">
-                <button
-                    onClick={() => setShowFavorites(!showFavorites)}
-                    className={`flex items-center gap-2 px-6 py-2 rounded-full font-bold transition-all border-2
-                        ${showFavorites
-                            ? 'bg-red-500 border-red-500 text-white shadow-lg shadow-red-200'
-                            : (isDarkMode
-                                ? 'bg-transparent border-gray-700 text-gray-400 hover:border-red-500 hover:text-red-500'
-                                : 'bg-white border-gray-200 text-gray-400 hover:border-red-500 hover:text-red-500')
-                        }
-                    `}
-                >
-                    <span>❤️</span>
-                    <span>{t.search.favorites || 'Favorites'}</span>
-                </button>
             </div>
 
             {/* Active Category Tags (Removable) */}
@@ -115,7 +96,7 @@ const SearchAndFilter = ({
                                         )
                                         : (isDarkMode
                                             ? 'bg-gray-800 border-gray-700 text-gray-400 hover:bg-gray-700 hover:text-white'
-                                            : 'bg-white border-gray-200 text-gray-500 hover:border-gray-300 hover:text-gray-800'
+                                            : 'bg-white border-gray-300 text-gray-600 hover:border-gray-400 hover:text-gray-900 shadow-sm'
                                         )
                                     }
                                 `}
@@ -124,6 +105,17 @@ const SearchAndFilter = ({
                             </button>
                         ))}
                     </div>
+
+                    {/* Pricing Disclaimer */}
+                    {priceFilter !== 'all' && t.search.pricing.disclaimer && (
+                        <motion.div
+                            initial={{ opacity: 0, y: -5 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className={`w-full text-center text-xs font-medium py-2 ${isDarkMode ? 'text-amber-400' : 'text-amber-600'}`}
+                        >
+                            {t.search.pricing.disclaimer[priceFilter]}
+                        </motion.div>
+                    )}
 
                     {/* Category Filter Toggle */}
                     <button

@@ -4,7 +4,7 @@ import { Image, Video, Music, Layout, MessageSquare, Code, FileText, Box, PenToo
 
 const icons = { Image, Video, Music, Layout, MessageSquare, Code, FileText, Box, PenTool, Globe };
 
-const CategoryGrid = ({ categories, onSelect, isDarkMode, activeCategory }) => {
+const CategoryGrid = React.memo(({ categories, onSelect, isDarkMode, activeCategory }) => {
     return (
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {categories.map((cat) => {
@@ -22,14 +22,14 @@ const CategoryGrid = ({ categories, onSelect, isDarkMode, activeCategory }) => {
               border-2 
               ${isActive
                                 ? 'bg-blue-50 border-blue-600 shadow-xl shadow-blue-500/20 scale-[1.02]'
-                                : 'bg-white border-transparent hover:border-gray-200 hover:shadow-xl shadow-lg shadow-gray-200/50 hover:-translate-y-1'
+                                : 'bg-slate-100 border-gray-400 hover:border-blue-600 hover:shadow-xl shadow-md shadow-gray-300/50 hover:-translate-y-1'
                             }
               ${isDarkMode ? 'dark:bg-gray-800 dark:border-gray-700 dark:shadow-none dark:hover:bg-gray-700' : ''}
             `}
                     >
                         <div className={`
               mb-4 transition-colors duration-300 transform group-hover:scale-110
-              ${isActive ? 'text-blue-600' : 'text-gray-400 group-hover:text-blue-600'}
+              ${isActive ? 'text-blue-600' : 'text-gray-600 group-hover:text-blue-600'}
             `}>
                             <Icon size={48} strokeWidth={1.5} />
                         </div>
@@ -46,6 +46,6 @@ const CategoryGrid = ({ categories, onSelect, isDarkMode, activeCategory }) => {
             })}
         </div>
     );
-};
+});
 
 export default CategoryGrid;

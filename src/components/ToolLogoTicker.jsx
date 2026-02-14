@@ -1,16 +1,18 @@
-import React from 'react';
+
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 
-const ToolLogoTicker = ({ tools, isDarkMode, t }) => {
-    if (!tools || tools.length === 0) return null;
-
+const ToolLogoTicker = React.memo(({ tools, isDarkMode }) => {
     // Duplicate tools array to create a seamless infinite loop
-    const tickerTools = [...tools, ...tools, ...tools];
+    const tickerTools = useMemo(() => {
+        if (!tools || tools.length === 0) return [];
+        return [...tools, ...tools, ...tools];
+    }, [tools]);
+
+    if (!tools || tools.length === 0) return null;
 
     return (
         <div className={`w-full overflow-hidden mb-16 relative ${isDarkMode ? 'opacity-90' : 'opacity-100'}`}>
-
-
 
             {/* Gradient Masks */}
             <div className={`absolute top-0 left-0 w-24 h-full z-10 bg-gradient-to-r ${isDarkMode ? 'from-gray-900 to-transparent' : 'from-gray-50 to-transparent'
@@ -63,6 +65,6 @@ const ToolLogoTicker = ({ tools, isDarkMode, t }) => {
             </div>
         </div>
     );
-};
+});
 
 export default ToolLogoTicker;

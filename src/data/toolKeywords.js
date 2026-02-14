@@ -1,0 +1,18 @@
+export const TOOL_KEYWORDS = [
+     { keyword: 'GPT', name: 'OpenAI GPT', url: 'https://chat.openai.com/' },
+     { keyword: 'Classic', name: 'Starting GPT', url: 'https://chat.openai.com/' },
+     { keyword: 'OpenAI', name: 'OpenAI', url: 'https://openai.com/' },
+     { keyword: 'Midjourney', name: 'Midjourney', url: 'https://www.midjourney.com/' },
+     { keyword: 'Claude', name: 'Claude', url: 'https://claude.ai/' },
+     { keyword: 'Gemini', name: 'Gemini', url: 'https://gemini.google.com/' },
+     { keyword: 'Google', name: 'Google AI', url: 'https://ai.google/' },
+     { keyword: 'Apple', name: 'Apple AI', url: 'https://www.apple.com/siri/' },
+     { keyword: 'Meta', name: 'Meta AI', url: 'https://ai.meta.com/' },
+     { keyword: 'Llama', name: 'Llama 3', url: 'https://llama.meta.com/' },
+     { keyword: 'Microsoft', name: 'Microsoft AI', url: 'https://www.microsoft.com/en-us/ai' },
+     { keyword: 'Suno', name: 'Suno', url: 'https://suno.com/' },
+     { keyword: 'Runway', name: 'Runway', url: 'https://runwayml.com/' },
+     { keyword: 'Perplexity', name: 'Perplexity', url: 'https://www.perplexity.ai/' },
+     { keyword: 'NVIDIA', name: 'NVIDIA AI', url: 'https://www.nvidia.com/en-us/ai-data-science/' },
+     { keyword: 'Mistral', name: 'Mistral AI', url: 'https://mistral.ai/' },
+];

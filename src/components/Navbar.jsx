@@ -1,12 +1,10 @@
 
 import React, { useState } from 'react';
 import { Sun, Moon, Globe, User, LogOut, Heart } from 'lucide-react';
-import { useAuth } from '../context/AuthContext';
 
-const Navbar = ({ isDarkMode, toggleTheme, onOpenNews, language, setLanguage, t, onOpenAuth }) => {
+
+const Navbar = ({ isDarkMode, toggleTheme, onOpenNews, language, setLanguage, t, onOpenAbout }) => {
     const [isLangOpen, setIsLangOpen] = useState(false);
-    const [isProfileOpen, setIsProfileOpen] = useState(false);
-    const { currentUser, logout } = useAuth();
 
     const languages = [
         { code: 'en', label: 'English' },
@@ -16,7 +14,7 @@ const Navbar = ({ isDarkMode, toggleTheme, onOpenNews, language, setLanguage, t,
     ];
 
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 transition-colors h-20">
+        <nav className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 transition-colors h-20 shadow-sm dark:shadow-none">
             <div className="container mx-auto px-6 h-full flex justify-between items-center">
                 {/* Brand */}
                 <div className="flex flex-col cursor-pointer" onClick={() => window.location.href = '/'}>
@@ -71,6 +69,13 @@ const Navbar = ({ isDarkMode, toggleTheme, onOpenNews, language, setLanguage, t,
                         {t.navbar.news}
                     </button>
 
+                    <button
+                        onClick={onOpenAbout}
+                        className="text-sm font-semibold text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 uppercase tracking-wide border-b-2 border-transparent hover:border-blue-600 transition-all pb-0.5"
+                    >
+                        {t.modal?.about || 'About'}
+                    </button>
+
                     <div className="flex items-center gap-3">
                         <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider hidden sm:block">
                             {isDarkMode ? t.navbar.dark : t.navbar.light}
@@ -85,63 +90,6 @@ const Navbar = ({ isDarkMode, toggleTheme, onOpenNews, language, setLanguage, t,
                             <div className="w-4 h-4 rounded-full bg-white shadow-sm transform transition-transform"></div>
                         </button>
                     </div>
-
-                    {/* Auth Section */}
-                    {currentUser ? (
-                        <div className="relative">
-                            <button
-                                onClick={() => setIsProfileOpen(!isProfileOpen)}
-                                className="flex items-center gap-2 focus:outline-none"
-                            >
-                                <img
-                                    src={currentUser.photoURL}
-                                    alt="User"
-                                    className="w-8 h-8 rounded-full border border-gray-200 dark:border-gray-700"
-                                />
-                            </button>
-
-                            {isProfileOpen && (
-                                <div className="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden py-1 z-50">
-                                    <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-700">
-                                        <p className="text-sm font-bold text-gray-900 dark:text-white truncate">
-                                            {currentUser.displayName}
-                                        </p>
-                                        <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
-                                            {currentUser.email}
-                                        </p>
-                                    </div>
-                                    <button
-                                        onClick={() => {
-                                            // Handle navigate to favorites
-                                            setIsProfileOpen(false);
-                                        }}
-                                        className="w-full text-left px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700 flex items-center gap-2"
-                                    >
-                                        <Heart size={16} />
-                                        {t.search?.favorites || 'My Favorites'}
-                                    </button>
-                                    <button
-                                        onClick={() => {
-                                            logout();
-                                            setIsProfileOpen(false);
-                                        }}
-                                        className="w-full text-left px-4 py-2 text-sm font-medium text-red-600 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-900/20 flex items-center gap-2"
-                                    >
-                                        <LogOut size={16} />
-                                        {t.auth?.logout || 'Sign Out'}
-                                    </button>
-                                </div>
-                            )}
-                        </div>
-                    ) : (
-                        <button
-                            onClick={onOpenAuth}
-                            className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-bold transition-all shadow-md shadow-blue-500/30 flex items-center gap-2"
-                        >
-                            <User size={16} />
-                            {t.auth?.login || 'Login'}
-                        </button>
-                    )}
                 </div>
             </div>
         </nav>

@@ -1,9 +1,9 @@
 
 import React from 'react';
 
-import { ExternalLink, ArrowRight, Info, Heart } from 'lucide-react';
+import { ExternalLink, ArrowRight, Info } from 'lucide-react';
 
-const ToolGrid = ({ tools, isDarkMode, onSelectTool, favorites = [], onToggleFavorite, t }) => {
+const ToolGrid = React.memo(({ tools, isDarkMode, onSelectTool, t }) => {
     return (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
             {tools.map((tool) => (
@@ -15,29 +15,17 @@ const ToolGrid = ({ tools, isDarkMode, onSelectTool, favorites = [], onToggleFav
             transition-all duration-300 border
             ${isDarkMode
                             ? 'bg-gray-800 border-gray-700 hover:bg-gray-750 hover:border-gray-600 hover:shadow-2xl hover:shadow-black/50'
-                            : 'bg-white border-transparent hover:border-blue-100 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1'
+                            : 'bg-white border border-gray-400 hover:border-blue-600 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1'
                         }
           `}
                 >
-                    <button
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            onToggleFavorite && onToggleFavorite(tool.id);
-                        }}
-                        className={`absolute top-4 right-4 z-10 p-3 rounded-full transition-all duration-300 ${favorites.includes(tool.id)
-                            ? 'bg-red-50 text-red-500 scale-110 shadow-md'
-                            : (isDarkMode ? 'bg-gray-700 text-gray-400 hover:text-red-400' : 'bg-white text-gray-300 hover:text-red-400 shadow-sm')
-                            }`}
-                    >
-                        <Heart size={18} fill={favorites.includes(tool.id) ? "currentColor" : "none"} />
-                    </button>
-
                     {/* Icon */}
                     <div className={`w-16 h-16 mb-4 rounded-2xl flex items-center justify-center transition-all duration-300 shadow-sm ${isDarkMode ? 'bg-gray-700 group-hover:bg-gray-600' : 'bg-gray-50 group-hover:bg-white group-hover:shadow-md'
                         }`}>
                         <img
                             src={tool.iconUrl}
                             alt={tool.name}
+                            loading="lazy"
                             className="w-10 h-10 object-contain group-hover:scale-110 transition-transform rounded-md"
                             onError={(e) => {
                                 e.target.onerror = null;
@@ -67,6 +55,6 @@ const ToolGrid = ({ tools, isDarkMode, onSelectTool, favorites = [], onToggleFav
             ))}
         </div>
     );
-};
+});
 
 export default ToolGrid;

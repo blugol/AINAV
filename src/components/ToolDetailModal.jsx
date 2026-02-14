@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Globe, CheckCircle2 } from 'lucide-react';
+import { X, ExternalLink, CheckCircle2 } from 'lucide-react';
 
 const ToolDetailModal = ({ isOpen, onClose, tool, isDarkMode, t, language }) => {
     if (!isOpen || !tool) return null;
@@ -95,7 +95,7 @@ const ToolDetailModal = ({ isOpen, onClose, tool, isDarkMode, t, language }) => 
                             href={tool.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center w-full gap-2 py-3.5 rounded-xl font-bold text-white bg-blue-600 hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-600/25 hover:-translate-y-0.5"
+                            className="flex items-center justify-center w-full gap-2 py-3.5 rounded-xl font-bold text-white bg-blue-600 hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-600/25 hover:-translate-y-0.5 mt-6"
                         >
                             <span>{t?.modal?.visit || 'Visit Official Website'}</span>
                             <ExternalLink size={18} />
