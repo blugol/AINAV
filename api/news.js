@@ -15,7 +15,7 @@
 import Parser from 'rss-parser';
 
 export const config = {
-    runtime: 'edge',
+    runtime: 'nodejs',
 };
 
 const parser = new Parser();
