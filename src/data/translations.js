@@ -90,6 +90,17 @@ export const translations = {
             github: 'GitHub (Coming Soon)',
             terms: 'By continuing, you agree to our Terms of Service.'
         },
+        contact: {
+            title: 'Contact Us',
+            subtitle: 'Have questions or want to partner with us?',
+            name: 'Name',
+            email: 'Email',
+            message: 'Message',
+            send: 'Send Message',
+            sending: 'Sending...',
+            success: 'Message sent successfully! Thank you.',
+            error: 'Something went wrong. Please try again.'
+        },
         ranking: {
             title: 'Live AI Ranking',
             realtime: 'Real-time',
@@ -187,6 +198,17 @@ export const translations = {
             google: 'Google로 계속하기',
             github: 'GitHub (준비 중)',
             terms: '계속 진행하면 이용약관 및 개인정보처리방침에 동의하게 됩니다.'
+        },
+        contact: {
+            title: '문의하기',
+            subtitle: '제휴 문의나 궁금한 점이 있으신가요?',
+            name: '이름',
+            email: '이메일',
+            message: '메시지',
+            send: '보내기',
+            sending: '전송 중...',
+            success: '메시지가 성공적으로 전송되었습니다! 감사합니다.',
+            error: '문제가 발생했습니다. 다시 시도해 주세요.'
         },
         ranking: {
             title: '실시간 AI 랭킹',
@@ -286,6 +308,17 @@ export const translations = {
             github: 'GitHub (準備中)',
             terms: '続行することで、利用規約に同意したものとみなされます。'
         },
+        contact: {
+            title: 'お問い合わせ',
+            subtitle: 'ご質問や提携のご依頼はこちらから',
+            name: 'お名前',
+            email: 'メールアドレス',
+            message: 'メッセージ',
+            send: '送信',
+            sending: '送信中...',
+            success: 'メッセージが送信されました！ありがとうございます。',
+            error: 'エラーが発生しました。もう一度お試しください。'
+        },
         ranking: {
             title: 'リアルタイム AI ランキング',
             realtime: 'リアルタイム',
@@ -383,6 +416,17 @@ export const translations = {
             google: '通过 Google 继续',
             github: 'GitHub (即将推出)',
             terms: '继续即表示您同意我们的服务条款。'
+        },
+        contact: {
+            title: '联系我们要',
+            subtitle: '有问题或想与我们合作？',
+            name: '姓名',
+            email: '电子邮件',
+            message: '信息',
+            send: '发送信息',
+            sending: '发送中...',
+            success: '消息发送成功！谢谢。',
+            error: '出了点问题。请再试一次。'
         },
         ranking: {
             title: '实时 AI 排行榜',

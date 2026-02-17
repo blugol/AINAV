@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Sun, Moon, Globe, User, LogOut, Heart } from 'lucide-react';
 
 
-const Navbar = ({ isDarkMode, toggleTheme, onOpenNews, language, setLanguage, t, onOpenAbout }) => {
+const Navbar = ({ isDarkMode, toggleTheme, onOpenNews, language, setLanguage, t, onOpenAbout, onOpenContact }) => {
     const [isLangOpen, setIsLangOpen] = useState(false);
 
     const languages = [
@@ -74,6 +74,13 @@ const Navbar = ({ isDarkMode, toggleTheme, onOpenNews, language, setLanguage, t,
                         className="text-sm font-semibold text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 uppercase tracking-wide border-b-2 border-transparent hover:border-blue-600 transition-all pb-0.5"
                     >
                         {t.modal?.about || 'About'}
+                    </button>
+
+                    <button
+                        onClick={onOpenContact}
+                        className="text-sm font-semibold text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 uppercase tracking-wide border-b-2 border-transparent hover:border-blue-600 transition-all pb-0.5"
+                    >
+                        {t.contact?.title || 'Contact'}
                     </button>
 
                     <div className="flex items-center gap-3">

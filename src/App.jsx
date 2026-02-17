@@ -21,11 +21,13 @@ import { RSS2JSON_API_URL } from './utils/constants';
 
 // Lazy Load Global Modals
 const NewsFeed = lazy(() => import('./components/NewsFeed'));
+const ContactModal = lazy(() => import('./components/ContactModal'));
 
 function App() {
 
   /* Global State */
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const [isNewsOpen, setIsNewsOpen] = useState(false);
 
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -121,6 +123,7 @@ function App() {
           setLanguage={setLanguage}
           t={t}
           onOpenAbout={() => setIsAboutOpen(true)}
+          onOpenContact={() => setIsContactOpen(true)}
         />
 
         <main>
@@ -158,6 +161,13 @@ function App() {
           <AboutModal
             isOpen={isAboutOpen}
             onClose={() => setIsAboutOpen(false)}
+            t={t}
+            isDarkMode={isDarkMode}
+          />
+
+          <ContactModal
+            isOpen={isContactOpen}
+            onClose={() => setIsContactOpen(false)}
             t={t}
             isDarkMode={isDarkMode}
           />
