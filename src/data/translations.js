@@ -129,6 +129,26 @@ export const translations = {
                 p2: 'AINAV\'s mission is simple: to curate, organize, and explain AI tools in a way that is accessible to everyone.',
                 p3: 'We believe that AI shouldn\'t be the exclusive domain of tech giants and developers. Whether you are a student, a creative professional, a business owner, or simply curious, you deserve easy access to the tools that are shaping our future.'
             },
+            stats: {
+                title: 'Growing Together',
+                items: [
+                    { value: '500+', label: 'AI Tools Indexed' },
+                    { value: 'Daily', label: 'Updates' },
+                    { value: 'Global', label: 'Community' },
+                    { value: '100%', label: 'Free Access' }
+                ]
+            },
+            values: {
+                title: 'Core Values',
+                v1: { title: 'Transparency', desc: 'We provide clear, unbiased information about every tool, including pricing and limitations.' },
+                v2: { title: 'Accessibility', desc: 'AI should be for everyone. We prioritize tools that are user-friendly and inclusive.' },
+                v3: { title: 'Innovation', desc: 'We are constantly on the lookout for the next big thing that will change how we work and live.' }
+            },
+            story: {
+                title: 'The AINAV Story',
+                p1: 'AINAV started as a simple spreadsheet shared among a small group of AI enthusiasts. We realized that as the list grew, so did the need for a better way to organize and find these amazing tools.',
+                p2: 'Today, we have evolved into a global platform, but our spirit remains the same: a community-driven effort to make sense of the AI revolution. We are not just a directory; we are a map for your journey into the future.'
+            },
             howTo: {
                 title: 'How to Use AINAV',
                 step1: { title: 'Discover Tools', desc: 'Browse our curated categories like "Image Generation," "Coding," and "Writing" to find tools tailored to your specific needs.' },
@@ -280,6 +300,26 @@ export const translations = {
                 p1: '인공지능 환경은 눈부신 속도로 발전하고 있습니다. 매일 수십 개의 새로운 도구, 모델, 연구 논문이 쏟아져 나옵니다. 일반 사용자가 이 정보의 홍수를 따라가기는 벅찹니다.',
                 p2: 'AINAV의 미션은 간단합니다. 누구나 이해할 수 있는 방식으로 AI 도구를 선별하고, 정리하고, 설명하는 것입니다.',
                 p3: '우리는 AI가 거대 기술 기업이나 개발자만의 전유물이 되어서는 안 된다고 믿습니다. 학생이든, 창작자든, 사업가든 그 누구라도 미래를 만들어가는 도구에 쉽게 접근할 수 있어야 합니다.'
+            },
+            stats: {
+                title: '성장하는 플랫폼',
+                items: [
+                    { value: '500+', label: 'AI 도구' },
+                    { value: '매일', label: '업데이트' },
+                    { value: '글로벌', label: '커뮤니티' },
+                    { value: '100%', label: '무료 이용' }
+                ]
+            },
+            values: {
+                title: '핵심 가치',
+                v1: { title: '투명성', desc: '가격과 한계를 포함하여 모든 도구에 대한 명확하고 편향되지 않은 정보를 제공합니다.' },
+                v2: { title: '접근성', desc: 'AI는 모두를 위한 것이어야 합니다. 우리는 사용자 친화적이고 포괄적인 도구를 우선시합니다.' },
+                v3: { title: '혁신', desc: '우리는 우리가 일하고 사는 방식을 변화실킬 획기적인 기술을 끊임없이 찾아냅니다.' }
+            },
+            story: {
+                title: 'AINAV 이야기',
+                p1: 'AINAV는 소수의 AI 열성가들이 공유하던 단순한 스프레드시트에서 시작되었습니다. 목록이 늘어남에 따라, 이 놀라운 도구들을 더 잘 정리하고 찾을 수 있는 방법이 필요하다는 것을 깨달았습니다.',
+                p2: '오늘날 우리는 글로벌 플랫폼으로 성장했지만, 우리의 정신은 변함없습니다. AI 혁명을 이해하기 위한 커뮤니티 주도의 노력입니다. 우리는 단순한 디렉토리가 아니라, 미래로 향하는 당신의 여정을 위한 지도입니다.'
             },
             howTo: {
                 title: 'AINAV 활용 가이드',
@@ -433,6 +473,26 @@ export const translations = {
                 p2: 'AINAVのミッションはシンプルです。誰にでもアクセスできる方法でAIツールを厳選し、整理し、説明することです。',
                 p3: 'AIはテクノロジー大手や開発者だけの独占領域であってはならないと私たちは信じています。学生であれ、クリエイティブな専門家であれ、経営者であれ、あるいは単に興味があるだけであれ、未来を形作るツールに簡単にアクセスできるべきです。'
             },
+            stats: {
+                title: '共に成長する',
+                items: [
+                    { value: '500+', label: 'AIツール' },
+                    { value: '毎日', label: '更新中' },
+                    { value: 'Global', label: 'コミュニティ' },
+                    { value: '100%', label: '完全無料' }
+                ]
+            },
+            values: {
+                title: '基本的価値観',
+                v1: { title: '透明性', desc: '価格や制限を含め、すべてのツールについて明確で公平な情報を提供します。' },
+                v2: { title: 'アクセシビリティ', desc: 'AIはすべての人のためのものです。私たちはユーザーフレンドリーで包括的なツールを優先します。' },
+                v3: { title: 'イノベーション', desc: '私たちは、働き方や生き方を変える次の大きなものを常に探しています。' }
+            },
+            story: {
+                title: 'AINAV ストーリー',
+                p1: 'AINAVは、少数のAI愛好家の間で共有されたシンプルなスプレッドシートとして始まりました。リストが増えるにつれて、これらの素晴らしいツールを整理して見つけるためのより良い方法が必要であることに気づきました。',
+                p2: '今日、私たちはグローバルプラットフォームへと進化しましたが、精神は変わりません。AI革命を理解するためのコミュニティ主導の取り組みです。私たちは単なるディレクトリではなく、未来への旅の地図です。'
+            },
             howTo: {
                 title: 'AINAVの使い方',
                 step1: { title: 'ツールを見つける', desc: '「画像生成」「プログラミング」「ライティング」などの厳選されたカテゴリを閲覧して、ニーズに合わせたツールを見つけてください。' },
@@ -584,6 +644,26 @@ export const translations = {
                 p1: '人工智能领域正在以惊人的速度发展。每天都有数十种新工具、模型和研究论文发布。对于普通用户来说，跟上这股信息洪流是压倒性的。',
                 p2: 'AINAV 的使命很简单：以一种每个人都能理解的方式策划、组织和解释 AI 工具。',
                 p3: '我们相信 AI 不应该只是科技巨头和开发者的专属领域。无论您是学生、创意专业人士、企业主，还是仅仅出于好奇，您都应该能够轻松访问正在塑造我们未来的工具。'
+            },
+            stats: {
+                title: '共同成长',
+                items: [
+                    { value: '500+', label: 'AI 工具索引' },
+                    { value: '每日', label: '更新' },
+                    { value: '全球', label: '社区' },
+                    { value: '100%', label: '免费访问' }
+                ]
+            },
+            values: {
+                title: '核心价值',
+                v1: { title: '透明度', desc: '我们提供关于每个工具的清晰、公正的信息，包括定价和限制。' },
+                v2: { title: '无障碍', desc: 'AI 应该属于每个人。我们优先考虑用户友好和包容性的工具。' },
+                v3: { title: '创新', desc: '我们一直在寻找下一个将改变我们工作和生活方式的重大事物。' }
+            },
+            story: {
+                title: 'AINAV 的故事',
+                p1: 'AINAV 最初只是在一小群 AI 爱好者之间共享的简单电子表格。我们意识到，随着列表的增长，我们需要一种更好的方式来组织和查找这些令人惊叹的工具。',
+                p2: '今天，我们已经发展成为一个全球平台，但我们的精神保持不变：一项社区驱动的努力，旨在理解 AI 革命。我们不仅仅是一个目录；我们是您通往未来之旅的地图。'
             },
             howTo: {
                 title: '如何使用 AINAV',
