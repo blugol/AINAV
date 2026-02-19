@@ -132,17 +132,17 @@ export const translations = {
             stats: {
                 title: 'Growing Together',
                 items: [
-                    { value: '500+', label: 'AI Tools Indexed' },
-                    { value: 'Daily', label: 'Updates' },
-                    { value: 'Global', label: 'Community' },
-                    { value: '100%', label: 'Free Access' }
+                    { value: '500+', label: 'AI Tools', detail: 'We manually review and index over 500 AI tools, ensuring high quality and relevance.' },
+                    { value: 'Daily', label: 'Updates', detail: 'Our team scouts the web 24/7 to bring you the freshest tools as soon as they launch.' },
+                    { value: 'Global', label: 'Community', detail: 'Join users from over 120 countries who trust AINAV for their daily AI needs.' },
+                    { value: '100%', label: 'Free Access', detail: 'We believe knowledge should be free. No paywalls, no hidden fees, ever.' }
                 ]
             },
             values: {
                 title: 'Core Values',
-                v1: { title: 'Transparency', desc: 'We provide clear, unbiased information about every tool, including pricing and limitations.' },
-                v2: { title: 'Accessibility', desc: 'AI should be for everyone. We prioritize tools that are user-friendly and inclusive.' },
-                v3: { title: 'Innovation', desc: 'We are constantly on the lookout for the next big thing that will change how we work and live.' }
+                v1: { title: 'Transparency', desc: 'We provide clear, unbiased information about every tool, including pricing and limitations.', detail: 'We disclose exactly how we monetize (ads & affiliations) and never let payments influence our rankings.' },
+                v2: { title: 'Accessibility', desc: 'AI should be for everyone. We prioritize tools that are user-friendly and inclusive.', detail: 'Our platform is designed to be navigable by anyone, regardless of their technical background.' },
+                v3: { title: 'Innovation', desc: 'We are constantly on the lookout for the next big thing that will change how we work and live.', detail: 'We feature regular "Spotlights" on emerging technology that pushes the boundaries of possibility.' }
             },
             story: {
                 title: 'The AINAV Story',
@@ -336,17 +336,17 @@ export const translations = {
             stats: {
                 title: '성장하는 플랫폼',
                 items: [
-                    { value: '500+', label: 'AI 도구' },
-                    { value: '매일', label: '업데이트' },
-                    { value: '글로벌', label: '커뮤니티' },
-                    { value: '100%', label: '무료 이용' }
+                    { value: '500+', label: 'AI 도구', detail: '500개 이상의 AI 도구를 수동으로 검토하고 인덱싱하여 높은 품질과 관련성을 보장합니다.' },
+                    { value: '매일', label: '업데이트', detail: '우리 팀은 24시간 웹을 모니터링하여 새로운 도구가 출시되는 즉시 여러분께 소개합니다.' },
+                    { value: '글로벌', label: '커뮤니티', detail: '120개국 이상의 사용자가 매일 AI 정보를 얻기 위해 AINAV를 신뢰하고 있습니다.' },
+                    { value: '100%', label: '무료 이용', detail: '지식은 무료여야 한다고 믿습니다. 유료 장벽이나 숨겨진 요금은 절대 없습니다.' }
                 ]
             },
             values: {
                 title: '핵심 가치',
-                v1: { title: '투명성', desc: '가격과 한계를 포함하여 모든 도구에 대한 명확하고 편향되지 않은 정보를 제공합니다.' },
-                v2: { title: '접근성', desc: 'AI는 모두를 위한 것이어야 합니다. 우리는 사용자 친화적이고 포괄적인 도구를 우선시합니다.' },
-                v3: { title: '혁신', desc: '우리는 우리가 일하고 사는 방식을 변화실킬 획기적인 기술을 끊임없이 찾아냅니다.' }
+                v1: { title: '투명성', desc: '가격과 한계를 포함하여 모든 도구에 대한 명확하고 편향되지 않은 정보를 제공합니다.', detail: '우리는 수익 모델(광고 및 제휴)을 투명하게 공개하며, 결제가 랭킹에 영향을 미치도록 하지 않습니다.' },
+                v2: { title: '접근성', desc: 'AI는 모두를 위한 것이어야 합니다. 우리는 사용자 친화적이고 포괄적인 도구를 우선시합니다.', detail: '우리의 플랫폼은 기술적 배경에 관계없이 누구나 쉽게 탐색할 수 있도록 설계되었습니다.' },
+                v3: { title: '혁신', desc: '우리는 우리가 일하고 사는 방식을 변화실킬 획기적인 기술을 끊임없이 찾아냅니다.', detail: '가능성의 경계를 넓히는 신기술에 대한 정기적인 "스포트라이트"를 통해 혁신을 소개합니다.' }
             },
             story: {
                 title: 'AINAV 이야기',
@@ -540,17 +540,17 @@ export const translations = {
             stats: {
                 title: '共に成長する',
                 items: [
-                    { value: '500+', label: 'AIツール' },
-                    { value: '毎日', label: '更新中' },
-                    { value: 'Global', label: 'コミュニティ' },
-                    { value: '100%', label: '完全無料' }
+                    { value: '500+', label: 'AIツール', detail: '500以上のAIツールを手動でレビューおよびインデックス化し、高品質と関連性を保証します。' },
+                    { value: '毎日', label: '更新中', detail: 'チームは24時間体制でWebを監視し、新しいツールがリリースされるとすぐにお届けします。' },
+                    { value: 'Global', label: 'コミュニティ', detail: '120か国以上のユーザーが、日々のAIニーズのためにAINAVを信頼しています。' },
+                    { value: '100%', label: '完全無料', detail: '知識は無料であるべきだと信じています。ペイウォールや隠れた料金は一切ありません。' }
                 ]
             },
             values: {
                 title: '基本的価値観',
-                v1: { title: '透明性', desc: '価格や制限を含め、すべてのツールについて明確で公平な情報を提供します。' },
-                v2: { title: 'アクセシビリティ', desc: 'AIはすべての人のためのものです。私たちはユーザーフレンドリーで包括的なツールを優先します。' },
-                v3: { title: 'イノベーション', desc: '私たちは、働き方や生き方を変える次の大きなものを常に探しています。' }
+                v1: { title: '透明性', desc: '価格や制限を含め、すべてのツールについて明確で公平な情報を提供します。', detail: '収益化の方法（広告と提携）を正確に開示し、支払いがランキングに影響を与えることは決してありません。' },
+                v2: { title: 'アクセシビリティ', desc: 'AIはすべての人のためのものです。私たちはユーザーフレンドリーで包括的なツールを優先します。', detail: '私たちのプラットフォームは、技術的なバックグラウンドに関係なく、誰でもナビゲートできるように設計されています。' },
+                v3: { title: 'イノベーション', desc: '私たちは、働き方や生き方を変える次の大きなものを常に探しています。', detail: '可能性の限界を押し広げる新興技術に関する定期的な「スポットライト」機能を提供しています。' }
             },
             story: {
                 title: 'AINAV ストーリー',
@@ -744,17 +744,17 @@ export const translations = {
             stats: {
                 title: '共同成长',
                 items: [
-                    { value: '500+', label: 'AI 工具索引' },
-                    { value: '每日', label: '更新' },
-                    { value: '全球', label: '社区' },
-                    { value: '100%', label: '免费访问' }
+                    { value: '500+', label: 'AI 工具索引', detail: '我们手动审查并索引了 500 多个 AI 工具，以确保高质量和相关性。' },
+                    { value: '每日', label: '更新', detail: '我们的团队 24/7 全天候搜寻网络，以便在最新工具发布时立即为您带来。' },
+                    { value: '全球', label: '社区', detail: '加入来自 120 多个国家/地区的用户行列，他们信任 AINAV 满足其日常 AI需求。' },
+                    { value: '100%', label: '免费访问', detail: '我们相信知识应该是免费的。永远没有付费墙，没有隐藏费用。' }
                 ]
             },
             values: {
                 title: '核心价值',
-                v1: { title: '透明度', desc: '我们提供关于每个工具的清晰、公正的信息，包括定价和限制。' },
-                v2: { title: '无障碍', desc: 'AI 应该属于每个人。我们优先考虑用户友好和包容性的工具。' },
-                v3: { title: '创新', desc: '我们一直在寻找下一个将改变我们工作和生活方式的重大事物。' }
+                v1: { title: '透明度', desc: '我们提供关于每个工具的清晰、公正的信息，包括定价和限制。', detail: '我们确切地披露我们如何获利（广告和隶属关系），并且绝不让付款影响我们的排名。' },
+                v2: { title: '无障碍', desc: 'AI 应该属于每个人。我们优先考虑用户友好和包容性的工具。', detail: '我们的平台旨在供任何人导航，无论其技术背景如何。' },
+                v3: { title: '创新', desc: '我们一直在寻找下一个将改变我们工作和生活方式的重大事物。', detail: '我们定期在此功能中通过“聚光灯”展示推向可能界限的新兴技术。' }
             },
             story: {
                 title: 'AINAV 的故事',

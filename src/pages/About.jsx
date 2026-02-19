@@ -5,7 +5,7 @@ import { Eye, Users, Zap, Shield, Globe, Award, Sparkles, Code, Database, Messag
 import AdSlot from '../components/AdSlot';
 
 const About = ({ isDarkMode, t, onOpenContact }) => {
-     const [selectedAI, setSelectedAI] = useState(null);
+     const [selectedInfo, setSelectedInfo] = useState(null); // Generic state for all modals
      const [activeTimeline, setActiveTimeline] = useState(null);
 
      if (!t.aboutPage) return null; // Guard clause
@@ -46,10 +46,22 @@ const About = ({ isDarkMode, t, onOpenContact }) => {
                          className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
                     >
                          {t.aboutPage.stats.items.map((stat, idx) => (
-                              <div key={idx} className="text-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700">
+                              <motion.div
+                                   key={idx}
+                                   whileHover={{ scale: 1.05 }}
+                                   whileTap={{ scale: 0.95 }}
+                                   onClick={() => setSelectedInfo({
+                                        title: stat.label,
+                                        desc: stat.detail || stat.label + " statistics",
+                                        icon: 'Award', // Generic icon for stats
+                                        detail: stat.value
+                                   })}
+                                   className="text-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 cursor-pointer hover:shadow-lg transition-all group"
+                              >
                                    <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">{stat.value}</div>
                                    <div className="text-sm font-semibold uppercase tracking-wider text-gray-500">{stat.label}</div>
-                              </div>
+                                   <p className="text-xs text-blue-400 mt-2 opacity-0 group-hover:opacity-100">Click for info</p>
+                              </motion.div>
                          ))}
                     </motion.section>
 
@@ -130,27 +142,57 @@ const About = ({ isDarkMode, t, onOpenContact }) => {
                     <section className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 rounded-[2.5rem] p-8 md:p-16 text-center">
                          <h2 className="text-3xl md:text-4xl font-bold mb-12">{t.aboutPage.values.title}</h2>
                          <div className="grid md:grid-cols-3 gap-8">
-                              <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-md">
+                              <motion.div
+                                   whileHover={{ y: -10 }}
+                                   onClick={() => setSelectedInfo({
+                                        icon: 'Eye',
+                                        title: t.aboutPage.values.v1.title,
+                                        desc: t.aboutPage.values.v1.desc,
+                                        detail: t.aboutPage.values.v1.detail
+                                   })}
+                                   className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-md cursor-pointer"
+                              >
                                    <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                                         <Eye size={32} />
                                    </div>
                                    <h3 className="text-xl font-bold mb-3">{t.aboutPage.values.v1.title}</h3>
                                    <p className="text-gray-600 dark:text-gray-400">{t.aboutPage.values.v1.desc}</p>
-                              </div>
-                              <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-md">
+                                   <p className="text-xs text-blue-500 mt-4 opacity-50 uppercase font-bold">More Info</p>
+                              </motion.div>
+                              <motion.div
+                                   whileHover={{ y: -10 }}
+                                   onClick={() => setSelectedInfo({
+                                        icon: 'Globe',
+                                        title: t.aboutPage.values.v2.title,
+                                        desc: t.aboutPage.values.v2.desc,
+                                        detail: t.aboutPage.values.v2.detail
+                                   })}
+                                   className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-md cursor-pointer"
+                              >
                                    <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                                         <Globe size={32} />
                                    </div>
                                    <h3 className="text-xl font-bold mb-3">{t.aboutPage.values.v2.title}</h3>
                                    <p className="text-gray-600 dark:text-gray-400">{t.aboutPage.values.v2.desc}</p>
-                              </div>
-                              <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-md">
+                                   <p className="text-xs text-purple-500 mt-4 opacity-50 uppercase font-bold">More Info</p>
+                              </motion.div>
+                              <motion.div
+                                   whileHover={{ y: -10 }}
+                                   onClick={() => setSelectedInfo({
+                                        icon: 'Zap',
+                                        title: t.aboutPage.values.v3.title,
+                                        desc: t.aboutPage.values.v3.desc,
+                                        detail: t.aboutPage.values.v3.detail
+                                   })}
+                                   className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-md cursor-pointer"
+                              >
                                    <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                                         <Zap size={32} />
                                    </div>
                                    <h3 className="text-xl font-bold mb-3">{t.aboutPage.values.v3.title}</h3>
                                    <p className="text-gray-600 dark:text-gray-400">{t.aboutPage.values.v3.desc}</p>
-                              </div>
+                                   <p className="text-xs text-green-500 mt-4 opacity-50 uppercase font-bold">More Info</p>
+                              </motion.div>
                          </div>
                     </section>
 
@@ -169,7 +211,7 @@ const About = ({ isDarkMode, t, onOpenContact }) => {
                                         key={cat.id}
                                         whileHover={{ scale: 1.05, y: -5 }}
                                         whileTap={{ scale: 0.95 }}
-                                        onClick={() => setSelectedAI(cat)}
+                                        onClick={() => setSelectedInfo({ ...cat, icon: cat.icon })} // Reuse Generic Modal
                                         className="flex flex-col items-center justify-center p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 dark:border-slate-700 transition-all group"
                                    >
                                         <div className="w-16 h-16 bg-gray-50 dark:bg-slate-700 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-50 dark:group-hover:bg-blue-900/30 transition-colors text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400">
@@ -270,18 +312,18 @@ const About = ({ isDarkMode, t, onOpenContact }) => {
      );
 };
 
-// Internal Component for the Interactive Modal
-const InteractiveAIModal = ({ isOpen, onClose, data, t, isDarkMode }) => {
+// Generic Modal for displaying content + Ad
+const InfoModal = ({ isOpen, onClose, data, t, isDarkMode }) => {
      if (!isOpen || !data) return null;
 
      return (
           <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
                <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onClick={onClose}></div>
                <motion.div
-                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                    initial={{ opacity: 0, scale: 0.95, y: 20 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                    className="relative w-full max-w-2xl bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-gray-100 dark:border-slate-800 overflow-hidden max-h-[90vh] overflow-y-auto"
+                    exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                    className="relative w-full max-w-lg bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-gray-100 dark:border-slate-800 overflow-hidden max-h-[90vh] overflow-y-auto"
                >
                     <button
                          onClick={onClose}
@@ -292,28 +334,32 @@ const InteractiveAIModal = ({ isOpen, onClose, data, t, isDarkMode }) => {
 
                     <div className="p-8">
                          <div className="flex items-center gap-4 mb-6">
-                              <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl text-blue-600 dark:text-blue-400">
-                                   {/* Icon render logic needs to be dynamic based on data.icon string, but simpler here is rendering the passed icon component if possible, 
-                                 or mapping string to component. For simplicity, we passed the string ID, so we need a map. 
-                                 Actually, let's map it in the parent or here. */}
-                                   <DynamicIcon name={data.icon} size={32} />
-                              </div>
+                              {data.icon && (
+                                   <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl text-blue-600 dark:text-blue-400">
+                                        <DynamicIcon name={data.icon} size={32} />
+                                   </div>
+                              )}
                               <div>
                                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{data.title}</h2>
-                                   <p className="text-gray-500 dark:text-gray-400 text-sm">{data.desc}</p>
+                                   {data.subtitle && <p className="text-gray-500 dark:text-gray-400 text-sm">{data.subtitle}</p>}
                               </div>
                          </div>
 
                          <div className="space-y-6">
                               <div className="prose dark:prose-invert max-w-none">
                                    <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                                        {data.desc} {data.desc} {/* Repeating for length, or we could add more detailed text in translations */}
+                                        {data.desc}
                                    </p>
+                                   {data.detail && (
+                                        <div className="mt-4 p-4 bg-gray-50 dark:bg-slate-800 rounded-lg text-sm text-gray-600 dark:text-gray-400 italic">
+                                             " {data.detail} "
+                                        </div>
+                                   )}
                               </div>
 
                               {/* Ad Unit - The "Gimmick" */}
                               <div className="border-t border-gray-100 dark:border-slate-800 pt-6">
-                                   <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">{t.aboutPage.interactiveAI.adTitle}</h3>
+                                   <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">{t.aboutPage.interactiveAI?.adTitle || 'Sponsored'}</h3>
                                    <AdSlot t={t} className="h-48" />
                               </div>
                          </div>
@@ -323,7 +369,7 @@ const InteractiveAIModal = ({ isOpen, onClose, data, t, isDarkMode }) => {
                                    onClick={onClose}
                                    className="px-6 py-2 bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 text-gray-900 dark:text-white rounded-lg font-medium transition-colors"
                               >
-                                   {t.aboutPage.interactiveAI.close}
+                                   {t.aboutPage.interactiveAI?.close || 'Close'}
                               </button>
                          </div>
                     </div>
@@ -334,7 +380,7 @@ const InteractiveAIModal = ({ isOpen, onClose, data, t, isDarkMode }) => {
 
 // Helper to render icons dynamically
 const DynamicIcon = ({ name, size }) => {
-     const icons = { Sparkles, Code, Database, MessageSquare, Zap, Globe, Users, Eye, Shield, Award, Calendar, Cpu, Layers, Wind, Terminal };
+     const icons = { Sparkles, Code, Database, MessageSquare, Zap, Globe, Users, Eye, Shield, Award, Calendar, Cpu, Layers, Wind, Terminal, Info };
      const IconComponent = icons[name] || Zap;
      return <IconComponent size={size} />;
 };
