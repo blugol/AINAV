@@ -109,7 +109,7 @@ export const tools = [
         category: 'video',
         pricing: 'Freemium',
         link: 'https://kling.kuaishou.com/',
-        iconUrl: 'https://www.google.com/s2/favicons?domain=kling.kuaishou.com&sz=128',
+        iconUrl: 'https://ui-avatars.com/api/?name=Kling+AI&background=000000&color=fff',
         description: 'Next-generation video generation model capable of creating high-definition, long-duration clips with realistic motion.',
         features: ['High Definition', 'Long Duration', 'Realistic Motion'],
         description_ko: '사실적인 움직임과 고해상도, 긴 길이의 영상을 생성할 수 있는 차세대 비디오 생성 모델입니다.',
