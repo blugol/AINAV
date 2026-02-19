@@ -116,6 +116,40 @@ export const translations = {
             viewTop10: 'View Top 10',
             showLess: 'Show Less',
             disclaimer: 'Ranking based on real-time engagement score (Views, Favorites, Comments) & LMSYS Chatbot Arena trends.\n* Likes/Comments features coming soon.'
+        },
+        aboutPage: {
+            hero: {
+                title: 'Democratizing Access to',
+                titleHighlight: 'Artificial Intelligence',
+                subtitle: 'AINAV is more than just a directory. We are a comprehensive information hub designed to bridge the gap between complex AI technology and everyday users.'
+            },
+            mission: {
+                title: 'Our Mission',
+                p1: 'The landscape of Artificial Intelligence is evolving at a breakneck pace. Every day, dozens of new tools, models, and research papers are released. For the average user, keeping up with this torrent of information is overwhelming.',
+                p2: 'AINAV\'s mission is simple: to curate, organize, and explain AI tools in a way that is accessible to everyone.',
+                p3: 'We believe that AI shouldn\'t be the exclusive domain of tech giants and developers. Whether you are a student, a creative professional, a business owner, or simply curious, you deserve easy access to the tools that are shaping our future.'
+            },
+            howTo: {
+                title: 'How to Use AINAV',
+                step1: { title: 'Discover Tools', desc: 'Browse our curated categories like "Image Generation," "Coding," and "Writing" to find tools tailored to your specific needs.' },
+                step2: { title: 'Compare Features', desc: 'Use our "Real-time Ranking" to see which tools are trending. Read detailed descriptions and feature lists to make informed decisions.' },
+                step3: { title: 'Stay Updated', desc: 'Check our "News" section daily. We aggregate the most important AI news so you never miss a major breakthrough or release.' }
+            },
+            faq: {
+                title: 'Frequently Asked Questions',
+                q1: 'Is AINAV free to use?',
+                a1: 'Yes, our directory and news services are 100% free. We are committed to open information access.',
+                q2: 'Do you sell AI software?',
+                a2: 'No, we are an informational directory. We provide links to the official websites of AI tools, but we do not sell the software ourselves.',
+                q3: 'How do you select the tools?',
+                a3: 'Our team manually reviews tools based on innovation, usability, and user feedback. We strictly avoid scamware or tools that do not deliver on their promises.',
+                q4: 'Can I submit a tool?',
+                a4: 'Currently, we curate tools internally to ensure quality. However, you can use our "Contact" form to suggest a tool for review.'
+            },
+            contact: {
+                question: 'Have more questions?',
+                cta: 'Contact Support Team'
+            }
         }
     },
     ko: {
@@ -234,6 +268,40 @@ export const translations = {
             viewTop10: 'Top 10 보기',
             showLess: '접기',
             disclaimer: '실시간 참여 점수(조회수, 즐겨찾기, 댓글) 및 LMSYS 챗봇 아레나 트렌드를 기반으로 선정되었습니다.\n* 좋아요/댓글 기능은 개발 중입니다.'
+        },
+        aboutPage: {
+            hero: {
+                title: '인공지능 정보의',
+                titleHighlight: '민주화를 위하여',
+                subtitle: 'AINAV는 단순한 디렉토리가 아닙니다. 복잡한 AI 기술과 일반 사용자 사이의 간극을 좁히기 위해 설계된 종합 정보 허브입니다.'
+            },
+            mission: {
+                title: '우리의 미션',
+                p1: '인공지능 환경은 눈부신 속도로 발전하고 있습니다. 매일 수십 개의 새로운 도구, 모델, 연구 논문이 쏟아져 나옵니다. 일반 사용자가 이 정보의 홍수를 따라가기는 벅찹니다.',
+                p2: 'AINAV의 미션은 간단합니다. 누구나 이해할 수 있는 방식으로 AI 도구를 선별하고, 정리하고, 설명하는 것입니다.',
+                p3: '우리는 AI가 거대 기술 기업이나 개발자만의 전유물이 되어서는 안 된다고 믿습니다. 학생이든, 창작자든, 사업가든 그 누구라도 미래를 만들어가는 도구에 쉽게 접근할 수 있어야 합니다.'
+            },
+            howTo: {
+                title: 'AINAV 활용 가이드',
+                step1: { title: '도구 발견하기', desc: '"이미지 생성", "코딩", "글쓰기" 등 큐레이팅된 카테고리를 탐색하여 필요에 딱 맞는 도구를 찾아보세요.' },
+                step2: { title: '기능 비교하기', desc: '"실시간 랭킹"을 통해 어떤 도구가 트렌드인지 확인하세요. 상세 설명과 기능 목록을 읽고 정보에 입각한 결정을 내리세요.' },
+                step3: { title: '최신 정보 유지', desc: '"뉴스" 섹션을 매일 확인하세요. 중요한 AI 소식을 모아 제공하므로 주요 혁신이나 출시 소식을 놓치지 않습니다.' }
+            },
+            faq: {
+                title: '자주 묻는 질문 (FAQ)',
+                q1: 'AINAV는 무료인가요?',
+                a1: '네, 디렉토리 및 뉴스 서비스는 100% 무료입니다. 우리는 정보 접근성의 개방을 지향합니다.',
+                q2: 'AI 소프트웨어를 직접 판매하나요?',
+                a2: '아니요, 우리는 정보 디렉토리입니다. AI 도구의 공식 웹사이트 링크를 제공하지만, 소프트웨어를 직접 판매하지는 않습니다.',
+                q3: '도구 선정 기준은 무엇인가요?',
+                a3: '혁신성, 사용성, 사용자 피드백을 기준으로 팀이 수동으로 검토합니다. 스캠이나 약속을 지키지 않는 도구는 철저히 배제합니다.',
+                q4: '도구를 등록 신청할 수 있나요?',
+                a4: '현재는 품질 유지를 위해 내부적으로 큐레이션하고 있습니다. "문의하기"를 통해 검토를 제안하실 수는 있습니다.'
+            },
+            contact: {
+                question: '더 궁금한 점이 있으신가요?',
+                cta: '지원팀에 문의하기'
+            }
         }
     },
     ja: {
@@ -352,6 +420,40 @@ export const translations = {
             viewTop10: 'Top 10 を見る',
             showLess: '折りたたむ',
             disclaimer: 'リアルタイムのエンゲージメントスコア（閲覧数、お気に入り、コメント）および LMSYS Chatbot Arena のトレンドに基づいています。\n* いいね/コメント機能は近日公開予定です。'
+        },
+        aboutPage: {
+            hero: {
+                title: '人工知能へのアクセスを',
+                titleHighlight: '民主化する',
+                subtitle: 'AINAVは単なるディレクトリではありません。複雑なAI技術と一般ユーザーのギャップを埋めるために設計された総合情報ハブです。'
+            },
+            mission: {
+                title: '私たちのミッション',
+                p1: '人工知能の状況は猛烈なスピードで進化しています。毎日、数十の新しいツール、モデル、研究論文が発表されています。一般のユーザーにとって、この情報の洪流についていくのは大変です。',
+                p2: 'AINAVのミッションはシンプルです。誰にでもアクセスできる方法でAIツールを厳選し、整理し、説明することです。',
+                p3: 'AIはテクノロジー大手や開発者だけの独占領域であってはならないと私たちは信じています。学生であれ、クリエイティブな専門家であれ、経営者であれ、あるいは単に興味があるだけであれ、未来を形作るツールに簡単にアクセスできるべきです。'
+            },
+            howTo: {
+                title: 'AINAVの使い方',
+                step1: { title: 'ツールを見つける', desc: '「画像生成」「プログラミング」「ライティング」などの厳選されたカテゴリを閲覧して、ニーズに合わせたツールを見つけてください。' },
+                step2: { title: '機能を比較する', desc: '「リアルタイムランキング」を使って、どのツールがトレンドかを確認してください。詳細な説明と機能リストを読んで、情報に基づいた決定を下してください。' },
+                step3: { title: '最新情報を入手', desc: '「ニュース」セクションを毎日チェックしてください。重要なAIニュースを集約しているため、主要なブレークスルーやリリースを見逃すことはありません。' }
+            },
+            faq: {
+                title: 'よくある質問 (FAQ)',
+                q1: 'AINAVは無料ですか？',
+                a1: 'はい、ディレクトリとニュースサービスは100%無料です。私たちは情報のオープンアクセスに取り組んでいます。',
+                q2: 'AIソフトウェアを販売していますか？',
+                a2: 'いいえ、私たちは情報ディレクトリです。AIツールの公式サイトへのリンクを提供していますが、ソフトウェア自体は販売していません。',
+                q3: 'ツールはどのように選定していますか？',
+                a3: '革新性、使いやすさ、ユーザーフィードバックに基づいて、チームが手動でレビューしています。詐欺やまやかしのツールは厳しく排除しています。',
+                q4: 'ツールを登録申請できますか？',
+                a4: '現在は品質を確保するため、内部でキュレーションを行っています。ただし、「お問い合わせ」からレビューを提案することは可能です。'
+            },
+            contact: {
+                question: '他にご質問がありますか？',
+                cta: 'サポートチームに連絡'
+            }
         }
     },
     zh: {
@@ -470,6 +572,40 @@ export const translations = {
             viewTop10: '查看前 10 名',
             showLess: '收起',
             disclaimer: '排名基于实时参与度得分（浏览量、收藏、评论）和 LMSYS 聊天机器人竞技场趋势。\n* 点赞/评论功能即将推出。'
+        },
+        aboutPage: {
+            hero: {
+                title: '让每个人都能',
+                titleHighlight: '访问人工智能',
+                subtitle: 'AINAV 不仅仅是一个目录。我们是一个综合信息中心，旨在弥合复杂的 AI 技术与普通用户之间的鸿沟。'
+            },
+            mission: {
+                title: '我们的使命',
+                p1: '人工智能领域正在以惊人的速度发展。每天都有数十种新工具、模型和研究论文发布。对于普通用户来说，跟上这股信息洪流是压倒性的。',
+                p2: 'AINAV 的使命很简单：以一种每个人都能理解的方式策划、组织和解释 AI 工具。',
+                p3: '我们相信 AI 不应该只是科技巨头和开发者的专属领域。无论您是学生、创意专业人士、企业主，还是仅仅出于好奇，您都应该能够轻松访问正在塑造我们未来的工具。'
+            },
+            howTo: {
+                title: '如何使用 AINAV',
+                step1: { title: '发现工具', desc: '浏览我们精心策划的分类，如“图像生成”、“编程”和“写作”，找到适合您特定需求的工具。' },
+                step2: { title: '比较功能', desc: '使用我们的“实时排行榜”查看哪些工具正在流行。阅读详细说明和功能列表以做出明智的决定。' },
+                step3: { title: '保持更新', desc: '每天查看我们的“新闻”部分。我们汇总了最重要的 AI 新闻，因此您绝不会错过任何重大突破或发布。' }
+            },
+            faq: {
+                title: '常见问题 (FAQ)',
+                q1: 'AINAV 是免费的吗？',
+                a1: '是的，我们的目录和新闻服务完全免费。我们致力于开放信息访问。',
+                q2: '你们出售 AI 软件吗？',
+                a2: '不，我们是一个信息目录。我们提供指向 AI 工具官方网站的链接，但我们自己不出售软件。',
+                q3: '你们如何选择工具？',
+                a3: '我们的团队根据创新性、可用性和用户反馈手动审核工具。我们严格避免诈骗软件或无法兑现承诺的工具。',
+                q4: '我可以提交工具吗？',
+                a4: '目前，我们在内部策划工具以确保质量。但是，您可以使用我们的“联系”表单建议进行审核的工具。'
+            },
+            contact: {
+                question: '还有更多问题吗？',
+                cta: '联系支持团队'
+            }
         }
     }
 };
