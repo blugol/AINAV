@@ -169,8 +169,20 @@ export const translations = {
             contact: {
                 question: 'Have more questions?',
                 cta: 'Contact Support Team'
+            },
+            interactiveAI: {
+                title: 'Explore the AI Universe',
+                desc: 'Click on a category to unlock knowledge and discover our partners.',
+                adTitle: 'Sponsored Content',
+                close: 'Close',
+                categories: [
+                    { id: 'gen', icon: 'Sparkles', title: 'Generative AI', desc: 'AI that can create new content, including audio, code, images, text, simulations, and videos.' },
+                    { id: 'code', icon: 'Code', title: 'Coding Assistants', desc: 'Tools that help developers write, debug, and optimize code faster than ever before.' },
+                    { id: 'data', icon: 'Database', title: 'Data Analysis', desc: 'Systems that process vast amounts of data to find patterns, trends, and actionable insights.' },
+                    { id: 'chat', icon: 'MessageSquare', title: 'Conversational AI', desc: 'Chatbots and virtual assistants that simulate human-like conversation.' }
+                ]
             }
-        }
+        },
     },
     ko: {
         navbar: {
@@ -341,6 +353,18 @@ export const translations = {
             contact: {
                 question: '더 궁금한 점이 있으신가요?',
                 cta: '지원팀에 문의하기'
+            },
+            interactiveAI: {
+                title: 'AI 유니버스 탐험',
+                desc: '카테고리를 클릭하여 지식을 잠금 해제하고 파트너를 만나보세요.',
+                adTitle: '스폰서 콘텐츠',
+                close: '닫기',
+                categories: [
+                    { id: 'gen', icon: 'Sparkles', title: '생성형 AI', desc: '오디오, 코드, 이미지, 텍스트, 비디오 등 새로운 콘텐츠를 만들어내는 AI 기술입니다.' },
+                    { id: 'code', icon: 'Code', title: '코딩 어시스턴트', desc: '개발자가 코드를 더 빠르고 정확하게 작성하고 디버깅할 수 있도록 돕는 도구입니다.' },
+                    { id: 'data', icon: 'Database', title: '데이터 분석', desc: '방대한 데이터를 처리하여 패턴, 트렌드, 그리고 인사이트를 찾아내는 시스템입니다.' },
+                    { id: 'chat', icon: 'MessageSquare', title: '대화형 AI', desc: '인간과 유사한 대화를 시뮬레이션하여 정보와 도움을 제공하는 챗봇입니다.' }
+                ]
             }
         }
     },
@@ -511,8 +535,20 @@ export const translations = {
                 a4: '現在は品質を確保するため、内部でキュレーションを行っています。ただし、「お問い合わせ」からレビューを提案することは可能です。'
             },
             contact: {
-                question: '他にご質問がありますか？',
+                question: 'さらに質問がありますか？',
                 cta: 'サポートチームに連絡'
+            },
+            interactiveAI: {
+                title: 'AIユニバースを探索',
+                desc: 'カテゴリをクリックして、知識を解き放ち、パートナーを発見してください。',
+                adTitle: 'スポンサーコンテンツ',
+                close: '閉じる',
+                categories: [
+                    { id: 'gen', icon: 'Sparkles', title: '生成AI', desc: '音声、コード、画像、テキスト、動画など、新しいコンテンツを作成できるAIです。' },
+                    { id: 'code', icon: 'Code', title: 'コーディング支援', desc: '開発者がこれまで以上に迅速にコードを作成、デバッグ、最適化するのを支援するツールです。' },
+                    { id: 'data', icon: 'Database', title: 'データ分析', desc: '膨大なデータを処理して、パターン、傾向、実用的な洞察を見つけるシステムです。' },
+                    { id: 'chat', icon: 'MessageSquare', title: '対話型AI', desc: '人間のような会話をシミュレートしてサポートや楽しみを提供するチャットボットです。' }
+                ]
             }
         }
     },

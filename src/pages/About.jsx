@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { Eye, Users, Zap, Shield, Globe, Award } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Eye, Users, Zap, Shield, Globe, Award, Sparkles, Code, Database, MessageSquare, X } from 'lucide-react';
+import AdSlot from '../components/AdSlot';
 
 const About = ({ isDarkMode, t, onOpenContact }) => {
+     const [selectedAI, setSelectedAI] = useState(null);
+
      if (!t.aboutPage) return null; // Guard clause
 
      return (
@@ -97,6 +100,39 @@ const About = ({ isDarkMode, t, onOpenContact }) => {
                          </div>
                     </section>
 
+
+
+                    {/* Interactive AI Gimmick Section */}
+                    <section className="space-y-8">
+                         <div className="text-center max-w-3xl mx-auto mb-12">
+                              <h2 className="text-3xl font-bold mb-4">{t.aboutPage.interactiveAI.title}</h2>
+                              <p className="text-gray-600 dark:text-gray-400">{t.aboutPage.interactiveAI.desc}</p>
+                         </div>
+
+                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                              {t.aboutPage.interactiveAI.categories.map((cat, idx) => (
+                                   <motion.button
+                                        key={cat.id}
+                                        whileHover={{ scale: 1.05, y: -5 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        onClick={() => setSelectedAI(cat)}
+                                        className="flex flex-col items-center justify-center p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 dark:border-slate-700 transition-all group"
+                                   >
+                                        <div className="w-16 h-16 bg-gray-50 dark:bg-slate-700 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-50 dark:group-hover:bg-blue-900/30 transition-colors text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                                             <DynamicIcon name={cat.icon} size={32} />
+                                        </div>
+                                        <h3 className="font-bold text-gray-900 dark:text-white mb-2">{cat.title}</h3>
+                                        <span className="text-xs text-blue-500 font-semibold uppercase tracking-wider">Click Me</span>
+                                   </motion.button>
+                              ))}
+                         </div>
+
+                         {/* Hidden hint */}
+                         <p className="text-center text-xs text-gray-300 dark:text-gray-700 italic mt-8">
+                              * Discover hidden gems by clicking the cards above
+                         </p>
+                    </section>
+
                     {/* How to Use (Simplified Grid) */}
                     <section>
                          <h2 className="text-3xl font-bold mb-10 text-center">{t.aboutPage.howTo.title}</h2>
@@ -144,8 +180,84 @@ const About = ({ isDarkMode, t, onOpenContact }) => {
                          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-600/20 blur-[100px] rounded-full pointer-events-none"></div>
                     </section>
                </div>
+
+               {/* Interactive AI Modal */}
+               <InteractiveAIModal
+                    isOpen={!!selectedAI}
+                    onClose={() => setSelectedAI(null)}
+                    data={selectedAI}
+                    t={t}
+                    isDarkMode={isDarkMode}
+               />
+          </div >
+     );
+};
+
+// Internal Component for the Interactive Modal
+const InteractiveAIModal = ({ isOpen, onClose, data, t, isDarkMode }) => {
+     if (!isOpen || !data) return null;
+
+     return (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+               <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onClick={onClose}></div>
+               <motion.div
+                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                    className="relative w-full max-w-2xl bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-gray-100 dark:border-slate-800 overflow-hidden max-h-[90vh] overflow-y-auto"
+               >
+                    <button
+                         onClick={onClose}
+                         className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 text-gray-400 transition-colors z-10"
+                    >
+                         <X size={24} />
+                    </button>
+
+                    <div className="p-8">
+                         <div className="flex items-center gap-4 mb-6">
+                              <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl text-blue-600 dark:text-blue-400">
+                                   {/* Icon render logic needs to be dynamic based on data.icon string, but simpler here is rendering the passed icon component if possible, 
+                                 or mapping string to component. For simplicity, we passed the string ID, so we need a map. 
+                                 Actually, let's map it in the parent or here. */}
+                                   <DynamicIcon name={data.icon} size={32} />
+                              </div>
+                              <div>
+                                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{data.title}</h2>
+                                   <p className="text-gray-500 dark:text-gray-400 text-sm">{data.desc}</p>
+                              </div>
+                         </div>
+
+                         <div className="space-y-6">
+                              <div className="prose dark:prose-invert max-w-none">
+                                   <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+                                        {data.desc} {data.desc} {/* Repeating for length, or we could add more detailed text in translations */}
+                                   </p>
+                              </div>
+
+                              {/* Ad Unit - The "Gimmick" */}
+                              <div className="border-t border-gray-100 dark:border-slate-800 pt-6">
+                                   <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">{t.aboutPage.interactiveAI.adTitle}</h3>
+                                   <AdSlot t={t} className="h-48" />
+                              </div>
+                         </div>
+
+                         <div className="mt-8 flex justify-end">
+                              <button
+                                   onClick={onClose}
+                                   className="px-6 py-2 bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 text-gray-900 dark:text-white rounded-lg font-medium transition-colors"
+                              >
+                                   {t.aboutPage.interactiveAI.close}
+                              </button>
+                         </div>
+                    </div>
+               </motion.div>
           </div>
      );
 };
 
-export default About;
+// Helper to render icons dynamically
+const DynamicIcon = ({ name, size }) => {
+     const icons = { Sparkles, Code, Database, MessageSquare, Zap, Globe, Users, Eye, Shield, Award };
+     const IconComponent = icons[name] || Zap;
+     return <IconComponent size={size} />;
+};
