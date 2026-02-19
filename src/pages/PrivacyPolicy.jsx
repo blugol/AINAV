@@ -1,7 +1,4 @@
-
-import React from 'react';
-import { motion } from 'framer-motion';
-import { X, ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
      return (
@@ -9,9 +6,9 @@ const PrivacyPolicy = () => {
                <div className="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
                     <div className="px-8 py-6 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
                          <h1 className="text-2xl font-bold">Privacy Policy & Terms</h1>
-                         <a href="/" className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                         <Link to="/" className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition">
                               <X size={24} />
-                         </a>
+                         </Link>
                     </div>
 
                     <div className="p-8 space-y-6 text-sm leading-relaxed">
@@ -84,9 +81,9 @@ const PrivacyPolicy = () => {
 
                     <div className="bg-gray-50 dark:bg-gray-700/50 px-8 py-4 flex justify-between items-center">
                          <span className="text-xs text-gray-500">Last updated: February 19, 2026</span>
-                         <a href="/" className="flex items-center gap-2 text-blue-600 hover:text-blue-500 font-medium">
+                         <Link to="/" className="flex items-center gap-2 text-blue-600 hover:text-blue-500 font-medium">
                               <ArrowLeft size={16} /> Back to Home
-                         </a>
+                         </Link>
                     </div>
                </div>
           </div>
