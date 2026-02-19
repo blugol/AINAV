@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Eye, Users, Zap, Shield, Globe, Award } from 'lucide-react';
 
-const About = ({ isDarkMode, t }) => {
+const About = ({ isDarkMode, t, onOpenContact }) => {
      if (!t.aboutPage) return null; // Guard clause
 
      return (
@@ -133,12 +133,12 @@ const About = ({ isDarkMode, t }) => {
                     <section className="text-center py-16 bg-gray-900 text-white rounded-[3rem] relative overflow-hidden">
                          <div className="relative z-10">
                               <h2 className="text-3xl font-bold mb-6">{t.aboutPage.contact.question}</h2>
-                              <a
-                                   href="mailto:contact@ainav.com"
+                              <button
+                                   onClick={onOpenContact}
                                    className="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-bold rounded-full hover:bg-blue-50 transition-all transform hover:scale-105"
                               >
                                    {t.aboutPage.contact.cta} <Award size={20} />
-                              </a>
+                              </button>
                          </div>
                          {/* Decorative background circle */}
                          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-600/20 blur-[100px] rounded-full pointer-events-none"></div>

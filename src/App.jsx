@@ -147,7 +147,7 @@ function App() {
             } />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<Terms />} />
-            <Route path="/about" element={<About isDarkMode={isDarkMode} t={t} />} />
+            <Route path="/about" element={<About isDarkMode={isDarkMode} t={t} onOpenContact={() => setIsContactOpen(true)} />} />
             <Route path="/tool/:id" element={<ToolDetail isDarkMode={isDarkMode} t={t} language={language} />} />
             <Route path="/blog" element={<Blog isDarkMode={isDarkMode} t={t} />} />
             <Route path="/blog/:slug" element={<BlogPost isDarkMode={isDarkMode} t={t} />} />
