@@ -168,6 +168,7 @@ const Home = ({ isDarkMode, t, language, newsData, onOpenNews, selectedDate, set
                          <div className="mb-8 max-w-2xl mx-auto"><AdSlot className="h-20" t={t} /></div>
                          <p className="text-sm text-gray-500 font-medium uppercase tracking-widest">{t.footer.rights}
                               {' '} | <a href="/about" className="hover:text-white underline">About Us</a>
+                              {' '} | <a href="/terms" className="hover:text-white underline">Terms</a>
                               {' '} | <a href="/privacy" className="hover:text-white underline">Privacy Policy</a>
                          </p>
                     </div>
@@ -179,4 +180,3 @@ const Home = ({ isDarkMode, t, language, newsData, onOpenNews, selectedDate, set
 };
 
 export default Home;
-```
