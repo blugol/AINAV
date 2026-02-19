@@ -180,7 +180,27 @@ export const translations = {
                     { id: 'code', icon: 'Code', title: 'Coding Assistants', desc: 'Tools that help developers write, debug, and optimize code faster than ever before.' },
                     { id: 'data', icon: 'Database', title: 'Data Analysis', desc: 'Systems that process vast amounts of data to find patterns, trends, and actionable insights.' },
                     { id: 'chat', icon: 'MessageSquare', title: 'Conversational AI', desc: 'Chatbots and virtual assistants that simulate human-like conversation.' }
-                ]
+                ],
+                timeline: {
+                    title: 'Our Journey',
+                    items: [
+                        { year: '2023 Q1', title: 'Inception', desc: 'The idea of AINAV was born from a simple spreadsheet shared among friends.' },
+                        { year: '2023 Q3', title: 'Alpha Launch', desc: 'We released the first MVP with just 50 tools. The feedback was overwhelming.' },
+                        { year: '2024 Q1', title: 'Global Expansion', desc: 'Added support for Korean, Japanese, and Chinese languages.' },
+                        { year: '2024 Q4', title: 'Community Growth', desc: 'Reached 500+ indexed tools and 10,000+ monthly active users.' },
+                        { year: '2025', title: 'The Future', desc: 'Developing AI Agents to autonomously help users find the perfect tools.' }
+                    ]
+                },
+                techStack: {
+                    title: 'Powered By',
+                    subtitle: 'Built with cutting-edge open source technologies.',
+                    items: [
+                        { name: 'React', desc: 'For building dynamic user interfaces.' },
+                        { name: 'Tailwind CSS', desc: 'For rapid and responsive styling.' },
+                        { name: 'Vite', desc: 'For lightning-fast development and build.' },
+                        { name: 'Framer Motion', desc: 'For buttery smooth animations.' }
+                    ]
+                }
             }
         },
     },
@@ -364,7 +384,27 @@ export const translations = {
                     { id: 'code', icon: 'Code', title: '코딩 어시스턴트', desc: '개발자가 코드를 더 빠르고 정확하게 작성하고 디버깅할 수 있도록 돕는 도구입니다.' },
                     { id: 'data', icon: 'Database', title: '데이터 분석', desc: '방대한 데이터를 처리하여 패턴, 트렌드, 그리고 인사이트를 찾아내는 시스템입니다.' },
                     { id: 'chat', icon: 'MessageSquare', title: '대화형 AI', desc: '인간과 유사한 대화를 시뮬레이션하여 정보와 도움을 제공하는 챗봇입니다.' }
-                ]
+                ],
+                timeline: {
+                    title: '우리의 여정',
+                    items: [
+                        { year: '2023 Q1', title: '시작', desc: '친구들끼리 공유하던 엑셀 시트에서 AINAV의 아이디어가 탄생했습니다.' },
+                        { year: '2023 Q3', title: '알파 출시', desc: '50개의 도구만으로 첫 MVP를 공개했습니다. 반응은 폭발적이었습니다.' },
+                        { year: '2024 Q1', title: '글로벌 확장', desc: '한국어, 일본어, 중국어 지원을 추가하여 전 세계 사용자와 만났습니다.' },
+                        { year: '2024 Q4', title: '커뮤니티 성장', desc: '500개 이상의 도구를 인덱싱하고 월간 활성 사용자 1만 명을 달성했습니다.' },
+                        { year: '2025', title: '미래', desc: '사용자에게 딱 맞는 도구를 자동으로 찾아주는 AI 에이전트를 개발 중입니다.' }
+                    ]
+                },
+                techStack: {
+                    title: '기술 스택',
+                    subtitle: '최첨단 오픈 소스 기술로 구축되었습니다.',
+                    items: [
+                        { name: 'React', desc: '동적인 사용자 인터페이스 구축을 위해 사용되었습니다.' },
+                        { name: 'Tailwind CSS', desc: '빠르고 반응형 디자인을 구현합니다.' },
+                        { name: 'Vite', desc: '초고속 개발 및 빌드 환경을 제공합니다.' },
+                        { name: 'Framer Motion', desc: '부드럽고 자연스러운 애니메이션 효과를 담당합니다.' }
+                    ]
+                }
             }
         }
     },
@@ -548,7 +588,27 @@ export const translations = {
                     { id: 'code', icon: 'Code', title: 'コーディング支援', desc: '開発者がこれまで以上に迅速にコードを作成、デバッグ、最適化するのを支援するツールです。' },
                     { id: 'data', icon: 'Database', title: 'データ分析', desc: '膨大なデータを処理して、パターン、傾向、実用的な洞察を見つけるシステムです。' },
                     { id: 'chat', icon: 'MessageSquare', title: '対話型AI', desc: '人間のような会話をシミュレートしてサポートや楽しみを提供するチャットボットです。' }
-                ]
+                ],
+                timeline: {
+                    title: '私たちの歩み',
+                    items: [
+                        { year: '2023 Q1', title: '始まり', desc: '友人間で共有されたシンプルなスプレッドシートからAINAVのアイデアが生まれました。' },
+                        { year: '2023 Q3', title: 'アルファ版ローンチ', desc: 'わずか50のツールで最初のMVPをリリースしました。反響は圧倒的でした。' },
+                        { year: '2024 Q1', title: 'グローバル展開', desc: '韓国語、日本語、中国語のサポートを追加し、世界中のユーザーと繋がりました。' },
+                        { year: '2024 Q4', title: 'コミュニティの成長', desc: '500以上のツールをインデックス化し、月間アクティブユーザー数が1万人を突破しました。' },
+                        { year: '2025', title: '未来', desc: '最適なツールを自律的に見つけるAIエージェントを開発中です。' }
+                    ]
+                },
+                techStack: {
+                    title: '技術スタック',
+                    subtitle: '最先端のオープンソース技術で構築されています。',
+                    items: [
+                        { name: 'React', desc: '動的なユーザーインターフェースを構築します。' },
+                        { name: 'Tailwind CSS', desc: '迅速でレスポンシブなスタイリングを実現します。' },
+                        { name: 'Vite', desc: '超高速な開発とビルドを提供します。' },
+                        { name: 'Framer Motion', desc: '滑らかで自然なアニメーションを実現します。' }
+                    ]
+                }
             }
         }
     },

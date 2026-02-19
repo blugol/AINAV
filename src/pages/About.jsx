@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, Users, Zap, Shield, Globe, Award, Sparkles, Code, Database, MessageSquare, X } from 'lucide-react';
+import { Eye, Users, Zap, Shield, Globe, Award, Sparkles, Code, Database, MessageSquare, X, Calendar, Cpu, Layers, Wind, Terminal } from 'lucide-react';
 import AdSlot from '../components/AdSlot';
 
 const About = ({ isDarkMode, t, onOpenContact }) => {
      const [selectedAI, setSelectedAI] = useState(null);
+     const [activeTimeline, setActiveTimeline] = useState(null);
 
      if (!t.aboutPage) return null; // Guard clause
 
@@ -72,6 +73,59 @@ const About = ({ isDarkMode, t, onOpenContact }) => {
                          </section>
                     </div>
 
+                    {/* Interactive Timeline Section */}
+                    <section className="max-w-4xl mx-auto py-12">
+                         <div className="text-center mb-12">
+                              <h2 className="text-3xl font-bold mb-4">{t.aboutPage.timeline.title}</h2>
+                         </div>
+                         <div className="relative border-l-2 border-blue-200 dark:border-blue-900 ml-4 md:ml-1/2 space-y-12">
+                              {t.aboutPage.timeline.items.map((item, index) => (
+                                   <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, x: -20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        className={`relative pl-8 md:pl-0 flex flex-col md:flex-row items-center justify-between group ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+                                   >
+                                        {/* Dot */}
+                                        <div
+                                             className={`absolute left-[-9px] md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full border-4 border-white dark:border-slate-900 transition-colors duration-300 ${activeTimeline === index ? 'bg-blue-600 scale-125' : 'bg-gray-300 dark:bg-slate-600 group-hover:bg-blue-400'}`}
+                                        ></div>
+
+                                        {/* Content Card */}
+                                        <div className={`w-full md:w-[45%] mb-4 md:mb-0 ${index % 2 === 0 ? 'text-left md:text-right' : 'text-left'}`}>
+                                             <motion.div
+                                                  whileHover={{ scale: 1.02 }}
+                                                  onClick={() => setActiveTimeline(activeTimeline === index ? null : index)}
+                                                  className={`p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100 dark:border-slate-700 cursor-pointer transition-all ${activeTimeline === index ? 'ring-2 ring-blue-500 shadow-lg' : 'hover:shadow-md'}`}
+                                             >
+                                                  <div className="flex items-center gap-2 mb-2 text-blue-600 dark:text-blue-400 font-bold justify-start md:justify-start">
+                                                       <Calendar size={16} />
+                                                       <span className="text-sm uppercase tracking-wider">{item.year}</span>
+                                                  </div>
+                                                  <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{item.title}</h3>
+                                                  <AnimatePresence>
+                                                       {(activeTimeline === index || window.innerWidth >= 768) && (
+                                                            <motion.p
+                                                                 initial={{ opacity: 0, height: 0 }}
+                                                                 animate={{ opacity: 1, height: 'auto' }}
+                                                                 exit={{ opacity: 0, height: 0 }}
+                                                                 className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed"
+                                                            >
+                                                                 {item.desc}
+                                                            </motion.p>
+                                                       )}
+                                                  </AnimatePresence>
+                                             </motion.div>
+                                        </div>
+
+                                        {/* Empty space for the other side */}
+                                        <div className="hidden md:block w-[45%]"></div>
+                                   </motion.div>
+                              ))}
+                         </div>
+                    </section>
+
                     {/* Core Values */}
                     <section className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 rounded-[2.5rem] p-8 md:p-16 text-center">
                          <h2 className="text-3xl md:text-4xl font-bold mb-12">{t.aboutPage.values.title}</h2>
@@ -131,6 +185,29 @@ const About = ({ isDarkMode, t, onOpenContact }) => {
                          <p className="text-center text-xs text-gray-300 dark:text-gray-700 italic mt-8">
                               * Discover hidden gems by clicking the cards above
                          </p>
+                    </section>
+
+                    {/* Tech Stack Section */}
+                    <section className="py-12">
+                         <div className="text-center mb-12">
+                              <h2 className="text-3xl font-bold mb-2">{t.aboutPage.techStack.title}</h2>
+                              <p className="text-gray-500 dark:text-gray-400">{t.aboutPage.techStack.subtitle}</p>
+                         </div>
+                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                              {t.aboutPage.techStack.items.map((tech, idx) => (
+                                   <motion.div
+                                        key={idx}
+                                        whileHover={{ y: -5 }}
+                                        className="flex flex-col items-center p-6 bg-gray-50 dark:bg-slate-800/50 rounded-2xl hover:bg-white dark:hover:bg-slate-800 hover:shadow-lg transition-all border border-transparent hover:border-blue-100 dark:hover:border-slate-700"
+                                   >
+                                        <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                                             <DynamicIcon name={['Code', 'Wind', 'Zap', 'Layers'][idx]} size={24} />
+                                        </div>
+                                        <h3 className="font-bold text-gray-900 dark:text-white mb-1">{tech.name}</h3>
+                                        <p className="text-xs text-gray-500 dark:text-gray-400 text-center">{tech.desc}</p>
+                                   </motion.div>
+                              ))}
+                         </div>
                     </section>
 
                     {/* How to Use (Simplified Grid) */}
@@ -257,7 +334,7 @@ const InteractiveAIModal = ({ isOpen, onClose, data, t, isDarkMode }) => {
 
 // Helper to render icons dynamically
 const DynamicIcon = ({ name, size }) => {
-     const icons = { Sparkles, Code, Database, MessageSquare, Zap, Globe, Users, Eye, Shield, Award };
+     const icons = { Sparkles, Code, Database, MessageSquare, Zap, Globe, Users, Eye, Shield, Award, Calendar, Cpu, Layers, Wind, Terminal };
      const IconComponent = icons[name] || Zap;
      return <IconComponent size={size} />;
 };
