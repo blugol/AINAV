@@ -10,7 +10,10 @@ import AboutModal from './components/AboutModal';
 // Pages
 import Home from './pages/Home';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import About from './pages/About'; // Import About Page
+import About from './pages/About';
+import ToolDetail from './pages/ToolDetail';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
 // Data & Utils
 import { translations } from './data/translations';
@@ -142,7 +145,12 @@ function App() {
               />
             } />
             <Route path="/privacy" element={<PrivacyPolicy />} />
+            } />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/about" element={<About isDarkMode={isDarkMode} t={t} />} />
+            <Route path="/tool/:id" element={<ToolDetail isDarkMode={isDarkMode} t={t} language={language} />} />
+            <Route path="/blog" element={<Blog isDarkMode={isDarkMode} t={t} />} />
+            <Route path="/blog/:slug" element={<BlogPost isDarkMode={isDarkMode} t={t} />} />
           </Routes>
         </main>
 

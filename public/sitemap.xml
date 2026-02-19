@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
   <url>
     <loc>https://ainav.vercel.app/</loc>
-    <lastmod>2026-02-18</lastmod>
+    <lastmod>2026-02-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ainav.vercel.app/privacy</loc>
-    <lastmod>2026-02-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ainav.vercel.app/about</loc>
@@ -18,4 +13,70 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://ainav.vercel.app/privacy</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ainav.vercel.app/blog</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://ainav.vercel.app/blog/how-to-choose-best-ai-image-generator</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ainav.vercel.app/blog/top-10-ai-coding-assistants</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ainav.vercel.app/blog/free-vs-paid-ai-tools</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tool Detail Pages (Generated) -->
+  <url><loc>https://ainav.vercel.app/tool/101</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/102</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/103</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/104</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/105</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/106</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/107</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/201</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/202</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/203</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/204</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/205</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/206</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/301</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/302</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/303</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/501</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/502</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/503</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/504</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/505</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/506</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/601</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/602</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/606</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/801</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/802</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/851</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/852</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/901</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/902</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ainav.vercel.app/tool/701</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>

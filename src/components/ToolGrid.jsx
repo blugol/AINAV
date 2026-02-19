@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { ExternalLink, ArrowRight, Info } from 'lucide-react';
 
@@ -7,9 +7,9 @@ const ToolGrid = React.memo(({ tools, isDarkMode, onSelectTool, t }) => {
     return (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
             {tools.map((tool) => (
-                <div
+                <Link
                     key={tool.id}
-                    onClick={() => onSelectTool(tool)}
+                    to={`/tool/${tool.id}`}
                     className={`
             group relative flex flex-col items-center p-6 rounded-2xl cursor-pointer
             transition-all duration-300 border
@@ -51,7 +51,7 @@ const ToolGrid = React.memo(({ tools, isDarkMode, onSelectTool, t }) => {
                         <span>{t?.toolCard?.viewDetails || 'View Details'}</span>
                         <Info size={14} />
                     </button>
-                </div>
+                </Link>
             ))}
         </div>
     );

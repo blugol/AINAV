@@ -15,13 +15,9 @@ import ScrollToTop from '../components/ScrollToTop';
 // Data & Utils
 import { categories, tools } from '../data/mockData';
 
-// Lazy Load Modals
-const ToolDetailModal = lazy(() => import('../components/ToolDetailModal'));
-
 const Home = ({ isDarkMode, t, language, newsData, onOpenNews, selectedDate, setSelectedDate, isNewsLoading }) => {
      /* Local State (Moved from App.jsx) */
      const [selectedCategories, setSelectedCategories] = useState([]);
-     const [selectedTool, setSelectedTool] = useState(null);
      const [searchQuery, setSearchQuery] = useState('');
      const [priceFilter, setPriceFilter] = useState('all');
 
@@ -95,7 +91,7 @@ const Home = ({ isDarkMode, t, language, newsData, onOpenNews, selectedDate, set
 
                {/* Ranking Board Section */}
                <section className="mb-20 max-w-5xl mx-auto px-4">
-                    <RankingBoard tools={toolsState} language={language} t={t} onSelectTool={setSelectedTool} />
+                    <RankingBoard tools={toolsState} language={language} t={t} />
                </section>
 
                {/* AI Tools Ticker */}
@@ -135,7 +131,7 @@ const Home = ({ isDarkMode, t, language, newsData, onOpenNews, selectedDate, set
                          <div className="h-px bg-gray-200 flex-1"></div>
                          {selectedCategories.length > 0 && (<span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 text-blue-600">{selectedCategories.length === 1 ? translatedCategories.find(c => c.id === selectedCategories[0])?.name : `${selectedCategories.length} selected`}</span>)}
                     </div>
-                    <ToolGrid tools={filteredTools} isDarkMode={isDarkMode} onSelectTool={setSelectedTool} t={t} />
+                    <ToolGrid tools={filteredTools} isDarkMode={isDarkMode} t={t} />
                     {filteredTools.length === 0 && (
                          <div className="text-center py-24 bg-transparent rounded-2xl border border-dashed border-gray-200 dark:border-white/10">
                               <p className="text-gray-400 font-medium">{searchQuery ? t.search?.noResults : t.sections.noTools}</p>
@@ -177,14 +173,10 @@ const Home = ({ isDarkMode, t, language, newsData, onOpenNews, selectedDate, set
                     </div>
                </footer>
 
-               {/* Modals & Overlays */}
-               <Suspense fallback={null}>
-                    {selectedTool && <ToolDetailModal isOpen={!!selectedTool} onClose={() => setSelectedTool(null)} tool={selectedTool} isDarkMode={isDarkMode} t={t} language={language} />}
-               </Suspense>
-
                <ScrollToTop isDarkMode={isDarkMode} />
           </div >
      );
 };
 
 export default Home;
+```
