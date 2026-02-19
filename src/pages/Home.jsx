@@ -143,6 +143,29 @@ const Home = ({ isDarkMode, t, language, newsData, onOpenNews, selectedDate, set
                     )}
                </section>
 
+               {/* FAQ / Content Section for SEO & AdSense */}
+               <section className="mb-24 px-4 max-w-4xl mx-auto">
+                    <div className="bg-gray-50 dark:bg-slate-800/50 rounded-3xl p-8 md:p-12 border border-gray-100 dark:border-slate-700">
+                         <h2 className="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-white">
+                              {t.faq?.title || 'About AINAV'}
+                         </h2>
+                         <div className="space-y-8">
+                              <div>
+                                   <h3 className="text-lg font-bold mb-2 text-gray-800 dark:text-gray-200">{t.faq?.q1}</h3>
+                                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{t.faq?.a1}</p>
+                              </div>
+                              <div>
+                                   <h3 className="text-lg font-bold mb-2 text-gray-800 dark:text-gray-200">{t.faq?.q2}</h3>
+                                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{t.faq?.a2}</p>
+                              </div>
+                              <div>
+                                   <h3 className="text-lg font-bold mb-2 text-gray-800 dark:text-gray-200">{t.faq?.q3}</h3>
+                                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{t.faq?.a3}</p>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+
                {/* Footer */}
                <footer className="py-8 bg-gray-900 text-white mt-12">
                     <div className="container mx-auto text-center px-4">

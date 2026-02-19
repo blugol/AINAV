@@ -101,6 +101,15 @@ export const translations = {
             success: 'Message sent successfully! Thank you.',
             error: 'Something went wrong. Please try again.'
         },
+        faq: {
+            title: 'About AINAV',
+            q1: 'What is AINAV?',
+            a1: 'AINAV is a global directory of Artificial Intelligence tools and services. We curate the best AI resources to help you find the perfect solution for your needs.',
+            q2: 'Is it free to use?',
+            a2: 'Yes, AINAV is completely free for all users. We aim to democratize access to AI technology information.',
+            q3: 'How are tools ranked?',
+            a3: 'Our ranking is based on a combination of user interest, functionality, and innovation in the AI space.'
+        },
         ranking: {
             title: 'Live AI Ranking',
             realtime: 'Real-time',
@@ -209,6 +218,15 @@ export const translations = {
             sending: '전송 중...',
             success: '메시지가 성공적으로 전송되었습니다! 감사합니다.',
             error: '문제가 발생했습니다. 다시 시도해 주세요.'
+        },
+        faq: {
+            title: 'AINAV 소개',
+            q1: 'AINAV는 무엇인가요?',
+            a1: 'AINAV는 전 세계의 인공지능 도구와 서비스를 모아놓은 글로벌 디렉토리입니다. 여러분에게 가장 적합한 AI 솔루션을 찾을 수 있도록 돕습니다.',
+            q2: '무료인가요?',
+            a2: '네, AINAV는 모든 사용자에게 완전히 무료로 제공됩니다. 우리는 AI 기술 정보에 대한 접근성을 높이는 것을 목표로 합니다.',
+            q3: '랭킹은 어떻게 선정되나요?',
+            a3: '사용자 관심도, 기능성, 그리고 AI 분야의 혁신성을 종합적으로 고려하여 랭킹을 선정합니다.'
         },
         ranking: {
             title: '실시간 AI 랭킹',
@@ -319,6 +337,15 @@ export const translations = {
             success: 'メッセージが送信されました！ありがとうございます。',
             error: 'エラーが発生しました。もう一度お試しください。'
         },
+        faq: {
+            title: 'AINAVについて',
+            q1: 'AINAVとは何ですか？',
+            a1: 'AINAVは、世界中のAIツールとサービスを集めたグローバルディレクトリです。あなたのニーズに最適なAIソリューションを見つけるお手伝いをします。',
+            q2: '無料で使用できますか？',
+            a2: 'はい、AINAVはすべてのユーザーに完全に無料で提供されています。AI技術情報へのアクセスを民主化することを目指しています。',
+            q3: 'ランキングはどのように決定されますか？',
+            a3: 'ユーザーの関心、機能性、そしてAI分野における革新性を組み合わせてランキングを決定しています。'
+        },
         ranking: {
             title: 'リアルタイム AI ランキング',
             realtime: 'リアルタイム',
@@ -427,6 +454,15 @@ export const translations = {
             sending: '发送中...',
             success: '消息发送成功！谢谢。',
             error: '出了点问题。请再试一次。'
+        },
+        faq: {
+            title: '关于 AINAV',
+            q1: '什么是 AINAV？',
+            a1: 'AINAV 是一个汇集全球人工智能工具和服务的目录。我们要策划最好的 AI 资源，帮助您找到最适合您需求的解决方案。',
+            q2: '它是免费的吗？',
+            a2: '是的，AINAV 对所有用户完全免费。我们的目标是普及 AI 技术信息。',
+            q3: '工具是如何排名的？',
+            a3: '我们的排名基于用户兴趣、功能性和 AI 领域的创新性综合得出。'
         },
         ranking: {
             title: '实时 AI 排行榜',
